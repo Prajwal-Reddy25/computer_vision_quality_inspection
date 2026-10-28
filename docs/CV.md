@@ -1,48 +1,39 @@
-# Portfolio and CV wording
+# CV wording — color and shape upgrade
 
-## Project heading
+## Heading
 
-**Computer Vision Quality Inspection — Python & OpenCV (AI-assisted project)**
+**Synthetic Part Inspection — Python/OpenCV (AI-assisted project)**
 
-## Two concise CV bullets
+## Two concise bullets
 
-- Specified an AI-assisted Python/OpenCV inspection project to segment, count and
-  locate red and blue parts using HSV thresholds, morphology and contour analysis.
-- Required a separate development/holdout evaluation: the frozen pipeline matched
-  all 74 objects in 30 synthetic images (IoU ≥ 0.5; precision/recall/F1 1.00), with
-  documented lighting/background failures and 48 passing tests.
+- Specified an AI-assisted synthetic inspection project using Python/OpenCV HSV
+  segmentation, morphology and classical contour geometry to classify, count and
+  locate red/blue rectangles, circles and triangles.
+- Required frozen holdout evaluation: 110 objects matched in 30 synthetic images
+  (correct color/shape, IoU≥0.5; precision/recall/F1 1.00), with 81 passing tests
+  and documented limitations.
 
-These bullets deliberately describe the verified requirements and the repository
-result. They do not claim independent student code authorship or personal
-debugging. Revise them after completing and recording your own modifications.
+These statements attribute the implementation honestly. They do not claim that
+the student independently wrote the pipeline or personally diagnosed its failures.
 
-## Technologies
+## Technologies and verified result
 
-Python, OpenCV, NumPy, pytest, Git; JSON configuration/annotations and a CLI.
+Python, OpenCV, NumPy, pytest, Git; JSON annotations/configuration and a CLI.
+Strongest verified result: 110 TP, zero FP/FN; correct color and shape count
+vectors on all 30 final synthetic images, reproduced exactly by a clean replay.
 
-## Strongest verified result
+The student supplied project scope, requested the three-shape upgrade and defined
+experimental/portfolio requirements. AI implemented the code, tests, experiments
+and documentation. Independent student modifications have not been demonstrated.
 
-All 74 labeled parts matched on the separate 30-image synthetic set after
-development-only parameter selection; no FP or FN at same-class IoU≥0.5.
-The full result reproduced exactly in a clean source replay.
+## Repository capabilities
 
-## Personal contribution and attribution
+Classical color segmentation; contour-based shape classification; counting and
+localization; input validation and deterministic outputs; schema validation;
+unit/integration tests; frozen evaluation; mask-based failure investigation;
+reproducible command-line execution.
 
-Verified student contribution: project scope, requirements, tool constraints,
-experimental requirements and direction. AI generated the implementation,
-tests, threshold investigation, evaluation execution and documentation.
-No independently written student implementation is recorded yet.
-
-## Capabilities demonstrated by the repository
-
-- Classical color segmentation and contour-based localization.
-- Input validation, deterministic results and structured Python functions.
-- Unit, boundary and real-detector integration testing.
-- Labeled datasets, one-to-one matching and precision/recall/F1 evaluation.
-- Lighting/background failure investigation and explicit limitations.
-- Frozen experiments, recorded provenance and reproducible command-line use.
-
-These are repository capabilities, not proof of personal proficiency. Use the
-learning guide and commit your own explained change before claiming them as
-independent skills. No robotics integration, real manufacturing deployment,
-deep learning or camera-based validation should be claimed.
+These are repository capabilities, not proof of independent personal proficiency.
+Complete and explain a personal modification before making stronger authorship
+claims. No industrial, real-camera, deep-learning or robotics integration claim
+is supported.

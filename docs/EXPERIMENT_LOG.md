@@ -1,71 +1,50 @@
-# Experiment log
+# Experiment log — shapes upgrade
 
-All work below was AI implemented/executed under the student's requirements.
-All images are synthetic. Code/configuration were finalized before the
-30-image set was generated. No threshold changes followed final evaluation.
+All implementation and execution below were AI-assisted under student requirements.
+The previous rectangle experiment remains recoverable at commit 9aef72d and in
+an ignored local checkpoint. Its observed final set was not reused for tuning.
 
-## 1. Baseline on development data
+## New design
 
-Seed 1729; 15 images; 37 objects. Original HSV saturation/value minima were
-120/80 for both classes. Rectangular 3×3 opening then closing, one iteration
-each; minimum contour area 400. Hue bounds stayed unchanged throughout.
+Development seed 31415, final seed 271828. Same five conditions; added circles
+and equilateral triangles alongside rectangles. Nonempty scenes contain 3–6
+separated objects, both colors and every shape. Image 001 contains all six
+color/shape combinations for the README.
 
-Measured TP/FP/FN: **35/21/2**. Precision **0.625**, recall **0.945946**,
-F1 **0.752688**, count MAE **1.4**. Evidence is in
-`evidence/development/baseline_results.json` and baseline comparisons/masks.
+Reused prior development-selected HSV settings (red S≥120, blue S≥175, V≥50).
+Added fixed shape rules: epsilon/perimeter 0.03, rotated rectangle fill≥0.85,
+circle circularity≥0.80. No shape-parameter search was performed.
 
-- `006_dim.png`: blue inner-patch value percentiles (1/50/99%) around 69/74/78
-  were below V≥80. It was rejected before contours. Background values were
-  approximately 19/22/26.
-- `013_blue_background.png`: the background passed the blue range and connected
-  to the part. One full-frame box replaced the true part box: 1 FP and 1 FN,
-  despite a correct total count of one.
-- `014_blue_background.png`: an empty blue scene yielded 20 accepted components.
-  Noise fragmented the thresholded background. Background saturation percentiles
-  were approximately 145/155/164.
+## Development and baseline comparison
 
-Comparisons were visually inspected. Raw/filtered masks and numeric observations
-are preserved; the diagnostics module can reproduce the observations.
+The initial new pipeline matched all 56 objects in 15 images. Shape tests were
+added, with no old expectations changed. All 81 tests passed in two environments.
 
-## 2. Rejected development candidate
+As an ablation, evaluated the historical HSV baseline (S≥120 and V≥80 for both
+colors) with the same shape rules on the new development data:
+45 TP, 1 FP, 11 FN; precision 0.978261, recall 0.803571, F1 0.882353.
+The baseline missed six parts in 006_dim and three in 008_dim.
+In 013_blue_background, a full-frame rectangle replaced two actual blue objects.
+These failures disappeared with the reused selected HSV settings.
 
-Tried S≥180 and V≥50 for both classes: **36 TP, 0 FP, 1 FN**, stored in
-`candidate_180_results.json`. It rejected a bright red part in `009_bright.png`:
-clipping reduced saturation to about 166–170. Rejected before final images existed.
+Saved baseline JSON, comparisons and raw/filtered masks. This is a controlled
+color-threshold comparison, not a claim that shape classification fixed lighting.
 
-## 3. Selected configuration
+## Freeze and final evaluation
 
-Kept red S≥**120**, set blue S≥**175**, and lowered both value minima to **50**.
-Blue's cutoff separates observed backgrounds and parts; the value cutoff adds
-margin below observed dim parts while rejecting dark background. These are
-development choices, not universal color constants. Area, hue and morphology
-parameters were unchanged.
+After source/config finalization and tests, froze the new package and generated
+the new 30-image final set for the first time. It contained 110 objects:
+57 red, 53 blue; 36 rectangles, 37 circles and 37 triangles.
+Strict color+shape matching at IoU≥0.5 gave 110 TP / 0 FP / 0 FN.
+Every total/color/shape count vector was correct. Minimum matched IoU: 0.8879.
 
-Measured **37 TP, 0 FP, 0 FN**, precision/recall/F1 all 1.0, correct per-color
-counts on 15/15 development images. This is tuning feedback, not an independent
-performance estimate. Verified again in the fresh pinned environment before freeze.
+No code or parameter tuning followed final generation/evaluation. Clean replay
+reproduced all final JSON values, detections and input hashes exactly.
 
-## 4. Frozen final evaluation
+## Separate limitations demonstrations
 
-See `evidence/frozen.json` for UTC time, configuration, source hashes, environment
-and development annotation hash. Final seed **92173**, 30 images, 74 objects:
-TP/FP/FN **74/0/0**, precision/recall/F1 **1.0/1.0/1.0**, count MAE **0**,
-correct per-color counts **30/30**. No final errors at IoU≥0.5.
-Minimum matched IoU: approximately **0.9365**.
-
-Complete JSON results reproduced exactly in a temporary clean source copy.
-That replay reused the same experiment; it is not another independent test.
-
-## 5. Post-evaluation limitations demonstrations
-
-Three deterministic stress images were evaluated separately, with no code or
-configuration changes. They are outside the benchmark and were not used for tuning:
-
-- 20×20 blue part: contour area 361 < 400; no detection, one FN.
-- Five-pixel dark stripe crossing a 60×40 tile: two boxes, both IoU < 0.5;
-  two FP and one FN. A 3×3 closing kernel cannot bridge the stripe.
-- Highly saturated blue background: the entire frame passes the threshold;
-  one FP and one FN. Count is correct but localization is wrong.
-
-See `evidence/stress/`. These cases demonstrate limits of the favorable benchmark
-result and remain available for future independent modifications.
+Recreated the three deterministic stress examples with explicit shape labels:
+small part, dark stripe and same-color background. Frozen detector results:
+0 TP, 3 FP, 3 FN in total. They remain separate from the benchmark and caused
+no changes. They illustrate why favorable simple synthetic results do not
+establish real-camera robustness.

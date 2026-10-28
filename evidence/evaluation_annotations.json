@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "synthetic": true,
   "split": "evaluation",
-  "seed": 92173,
+  "seed": 271828,
   "images": [
     {
       "file": "images/000_nominal.png",
@@ -19,38 +19,62 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            35,
-            70,
+            206,
+            57,
+            71,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            370,
+            250,
             69,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            43,
-            245,
-            77,
-            47
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            378,
-            262,
-            53,
-            37
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            210,
-            68,
-            73,
             45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            355,
+            53,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            41,
+            48,
+            55,
+            48
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            208,
+            239,
+            73,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            50,
+            235,
+            71,
+            71
           ]
         }
       ]
@@ -62,30 +86,53 @@
       "condition": "nominal",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            37,
-            260,
-            77,
-            39
+            199,
+            225,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            382,
+            232,
+            57,
+            50
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            382,
-            246,
-            51,
-            33
+            220,
+            66,
+            63,
+            37
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            206,
-            78,
-            71,
-            31
+            369,
+            59,
+            67,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            36,
+            222,
+            69,
+            60
           ]
         }
       ]
@@ -97,21 +144,43 @@
       "condition": "nominal",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            32,
-            256,
-            73,
-            47
+            35,
+            238,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            382,
+            234,
+            61,
+            53
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            200,
-            240,
-            79,
-            53
+            204,
+            52,
+            65,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            376,
+            66,
+            67,
+            67
           ]
         }
       ]
@@ -123,39 +192,63 @@
       "condition": "nominal",
       "objects": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            356,
-            240,
-            75,
+            216,
+            54,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            38,
+            262,
+            67,
             39
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            382,
-            64,
-            47,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            56,
-            66,
-            69,
-            33
+            367,
+            227,
+            65,
+            65
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            56,
-            258,
+            65,
+            70,
             53,
-            31
+            46
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            254,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            380,
+            51,
+            61,
+            61
           ]
         }
       ]
@@ -168,38 +261,32 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            216,
-            252,
-            61,
-            53
+            60,
+            54,
+            55,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            369,
+            76,
+            71,
+            45
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            52,
-            62,
+            41,
+            242,
             73,
-            41
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            374,
-            66,
-            65,
-            51
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            382,
-            243,
-            49,
-            45
+            73
           ]
         }
       ]
@@ -212,11 +299,52 @@
       "objects": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            355,
-            240,
-            93,
-            77
+            55,
+            42,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            370,
+            76,
+            49,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            198,
+            220,
+            81,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            214,
+            58,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            54,
+            261,
+            56,
+            54
           ]
         }
       ]
@@ -236,56 +364,42 @@
       "objects": [
         {
           "label": "blue",
-          "bbox": [
-            209,
-            49,
-            71,
-            61
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            353,
-            45,
-            91,
-            71
-          ]
-        },
-        {
-          "label": "red",
+          "shape": "triangle",
           "bbox": [
             360,
-            238,
-            75,
-            71
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            34,
-            227,
-            83,
-            75
+            236,
+            62,
+            58
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            194,
-            225,
-            71,
-            71
+            205,
+            46,
+            65,
+            77
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            44,
+            202,
+            234,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            58,
+            242,
             51,
-            77,
-            75
+            53
           ]
         }
       ]
@@ -298,20 +412,42 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            38,
-            56,
-            71,
-            83
+            195,
+            49,
+            75,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            29,
+            222,
+            79,
+            79
           ]
         },
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            43,
-            241,
-            79,
-            53
+            381,
+            55,
+            63,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            39,
+            50,
+            77,
+            67
           ]
         }
       ]
@@ -324,20 +460,32 @@
       "objects": [
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            51,
-            250,
-            63,
-            61
+            50,
+            242,
+            64,
+            60
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            352,
+            76,
+            81,
+            37
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            216,
-            242,
-            73,
-            73
+            38,
+            53,
+            81,
+            81
           ]
         }
       ]
@@ -350,38 +498,52 @@
       "objects": [
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            41,
-            55,
-            73,
-            77
+            376,
+            229,
+            64,
+            61
           ]
         },
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            364,
-            227,
-            73,
-            73
+            37,
+            60,
+            75,
+            57
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            207,
-            244,
-            73,
-            73
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            35,
+            204,
             228,
-            85,
-            71
+            63,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            34,
+            227,
+            70,
+            66
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            193,
+            57,
+            75,
+            57
           ]
         }
       ]
@@ -394,11 +556,32 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            220,
-            81,
-            53,
-            37
+            50,
+            70,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            200,
+            44,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            371,
+            62,
+            59,
+            52
           ]
         }
       ]
@@ -410,39 +593,43 @@
       "condition": "dim",
       "objects": [
         {
-          "label": "red",
-          "bbox": [
-            46,
-            64,
-            75,
-            33
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            60,
-            247,
-            47,
-            49
-          ]
-        },
-        {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            214,
-            60,
-            45,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            365,
+            32,
             250,
-            57,
+            75,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            197,
+            235,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            197,
+            55,
+            63,
             55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            358,
+            252,
+            67,
+            43
           ]
         }
       ]
@@ -461,39 +648,63 @@
       "condition": "dim",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            367,
-            56,
-            67,
+            366,
+            222,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            217,
+            232,
+            61,
             53
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            45,
-            71,
-            55,
-            41
+            56,
+            264,
+            65,
+            37
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            368,
+            48,
+            69,
+            69
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            206,
-            78,
-            51,
+            216,
+            64,
+            63,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            57,
+            70,
+            61,
             35
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            380,
-            258,
-            51,
-            47
           ]
         }
       ]
@@ -506,56 +717,32 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            54,
-            263,
-            51,
-            33
+            40,
+            49,
+            65,
+            56
           ]
         },
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            196,
-            238,
-            81,
-            45
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            370,
-            246,
+            356,
             59,
-            43
+            69,
+            53
           ]
         },
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "circle",
           "bbox": [
-            196,
-            72,
-            81,
-            37
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            363,
-            78,
-            71,
-            31
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            48,
-            60,
-            73,
-            57
+            364,
+            233,
+            67,
+            67
           ]
         }
       ]
@@ -568,29 +755,42 @@
       "objects": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            376,
-            233,
+            209,
+            237,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            365,
             53,
-            55
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            222,
-            64,
             59,
-            55
+            50
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            60,
-            256,
-            47,
-            37
+            46,
+            57,
+            63,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            361,
+            235,
+            61,
+            61
           ]
         }
       ]
@@ -603,11 +803,32 @@
       "objects": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            381,
-            64,
-            47,
-            47
+            60,
+            69,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            378,
+            56,
+            67,
+            58
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            59,
+            254,
+            61,
+            39
           ]
         }
       ]
@@ -619,12 +840,33 @@
       "condition": "bright",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            374,
-            256,
-            47,
-            41
+            36,
+            255,
+            65,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            209,
+            236,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            42,
+            46,
+            65,
+            57
           ]
         }
       ]
@@ -636,12 +878,43 @@
       "condition": "bright",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            209,
-            242,
-            47,
-            57
+            365,
+            48,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            55,
+            50,
+            55,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            199,
+            70,
+            77,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            201,
+            234,
+            71,
+            71
           ]
         }
       ]
@@ -661,29 +934,62 @@
       "objects": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            361,
-            263,
-            61,
-            39
+            56,
+            51,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            372,
+            41,
+            67,
+            58
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            364,
-            72,
+            203,
+            239,
             73,
-            35
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            371,
+            223,
+            71,
+            71
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            200,
-            62,
-            59,
-            41
+            44,
+            228,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            60,
+            75,
+            51
           ]
         }
       ]
@@ -696,20 +1002,62 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            226,
-            70,
-            47,
-            31
+            213,
+            258,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            202,
+            59,
+            79,
+            79
           ]
         },
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            214,
-            258,
-            73,
-            35
+            361,
+            222,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            52,
+            59,
+            61,
+            39
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            53,
+            242,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            362,
+            48,
+            63,
+            55
           ]
         }
       ]
@@ -722,11 +1070,52 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            58,
-            262,
+            371,
+            220,
+            65,
+            58
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            358,
+            68,
+            65,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
             51,
-            37
+            59,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            208,
+            51,
+            59,
+            50
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            190,
+            251,
+            77,
+            41
           ]
         }
       ]
@@ -739,56 +1128,62 @@
       "objects": [
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            40,
+            354,
+            218,
             71,
-            57,
-            49
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            215,
-            252,
-            47,
-            51
+            61
           ]
         },
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            52,
-            234,
-            65,
-            51
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            378,
-            254,
             57,
-            53
+            79,
+            61,
+            37
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            378,
-            56,
+            194,
+            232,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            370,
+            60,
             63,
-            45
+            54
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            205,
+            36,
+            247,
+            81,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            203,
+            60,
             67,
-            71,
-            39
+            67
           ]
         }
       ]
@@ -801,47 +1196,42 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
             36,
-            245,
-            71,
-            43
+            243,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            365,
+            58,
+            79,
+            79
           ]
         },
         {
           "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            49,
+            64,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
             204,
-            76,
-            77,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            376,
-            62,
-            67,
-            55
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            364,
-            253,
-            51,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            214,
-            252,
-            65,
-            53
+            259,
+            81,
+            39
           ]
         }
       ]
@@ -854,29 +1244,52 @@
       "objects": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            206,
-            70,
-            63,
-            45
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            374,
-            74,
-            49,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            34,
-            252,
+            201,
+            243,
             77,
-            47
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            210,
+            52,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            59,
+            235,
+            63,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            361,
+            238,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            53,
+            56,
+            67,
+            58
           ]
         }
       ]
@@ -895,12 +1308,33 @@
       "condition": "blue_background",
       "objects": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            212,
-            248,
+            201,
+            48,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            378,
+            52,
             59,
-            33
+            52
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            34,
+            78,
+            75,
+            39
           ]
         }
       ]

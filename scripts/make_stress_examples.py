@@ -34,8 +34,9 @@ def generate(output: Path) -> None:
         if not cv2.imwrite(str(output / filename), image):
             raise OSError(f"Could not write {filename}")
         records.append({"file": filename, "width": 160, "height": 120,
-                        "condition": condition, "objects": [{"label": "blue", "bbox": box}]})
-    manifest = {"schema_version": 1, "synthetic": True, "split": "development",
+                        "condition": condition, "objects": [
+                            {"label": "blue", "shape": "rectangle", "bbox": box}]})
+    manifest = {"schema_version": 2, "synthetic": True, "split": "development",
                 "purpose": "post-evaluation limitations demonstration; not used for tuning",
                 "seed": None, "images": records}
     (output / "annotations.json").write_text(json.dumps(manifest, indent=2) + "\n")

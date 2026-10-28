@@ -1,42 +1,72 @@
 # Architecture
 
-The detector is a small pure image-processing pipeline: it accepts a NumPy image
-and validated configuration and returns detections without file I/O.
+A small classical pipeline detects color, classifies shape, counts parts and
+localizes them with axis-aligned boxes. It uses no trained model.
 
 ```mermaid
 flowchart LR
-    A[Image directory] --> B[CLI and image loading]
-    C[JSON configuration] --> D[Validation]
-    D --> E[Detector]
-    B --> E
-    E --> F[Detection list]
-    F --> G[Annotated images and counts JSON]
-    F --> H[One-to-one matching]
-    I[Ground-truth annotations] --> H
-    H --> J[Metrics, errors, comparisons and report]
+    A[BGR image] --> B[Validate and convert to HSV]
+    B --> C[Red and blue masks]
+    C --> D[Opening and closing]
+    D --> E[External contours and area filter]
+    E --> F[Shape geometry rules]
+    F --> G[Color + shape + bounding box]
+    G --> H[Annotated PNGs and counts JSON]
+    G --> I[Joint label and IoU matching]
+    J[Geometry-derived annotations] --> I
+    I --> K[Metrics, errors and report]
 ```
 
-`Detection` is a frozen dataclass containing a class label and an integer box.
-It represents one observation, not an identity tracked across frames.
-Counts are derived from the returned list.
+## Detector and shape heuristics
 
-`detector.py` validates input, converts BGR to HSV once, then loops over colors.
-`threshold_color` ORs the class's intervals. `filter_mask` applies rectangular
-opening then closing. External contours are filtered by contour area; boxes
-are sorted by label, y, x, width and height. Caller images/masks are unchanged.
+The detector has no file I/O. It validates uint8 BGR input, converts once, ORs
+each color's HSV intervals, applies a 3×3 rectangular opening then closing,
+and accepts external contours with area ≥400. Masks/images are not modified
+in place. Results sort by color, y, x, width, height and shape.
 
-`dataset.py` uses fixed independent RNG seeds and geometry-derived labels.
-`evaluation.py` performs class-aware maximum-cardinality matching at fixed IoU,
-then computes micro metrics and count errors. `cli.py` handles workflow, inputs,
-output directories, provenance and report assembly. Visualization/reporting
-render results without changing detection decisions.
+For each contour, approximate its boundary with approxPolyDP at epsilon equal
+to **0.03 × perimeter**. Classify in this order:
 
-`diagnostics.py` saves development-only masks and HSV observations.
-`scripts/verify_workflow.py` replays the pipeline in a temporary clean source
-copy; `scripts/make_stress_examples.py` generates limitations demonstrations.
+1. Three convex approximated vertices → triangle.
+2. Four convex vertices and contour area / rotated minAreaRect area ≥ **0.85**
+   → rectangle. Squares are included.
+3. At least five convex approximated vertices and circularity
+   **4π × area / perimeter² ≥ 0.80** → circle.
+4. Otherwise → unknown.
 
-The freeze record hashes every Python file in `quality_inspection/`, raw
-configuration bytes and Python/OpenCV/NumPy versions. It does not hash Markdown,
-tests, helper scripts or dependency files; those are reviewed through Git.
-Evaluation JSON includes annotation/input hashes. This is an experiment
-provenance check, not a secure benchmark service.
+Zero area/perimeter returns unknown. These fixed, development-checked heuristics
+are intentionally limited: circularity is not a proof of circular geometry.
+Ellipses/rounded polygons and some quadrilaterals can be misclassified.
+The API operations are documented by OpenCV:
+[contour features](https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html)
+and [contour properties](https://docs.opencv.org/4.x/d1/d32/tutorial_py_contour_properties.html).
+The numerical cutoffs are project choices, not OpenCV guarantees.
+
+## Data and evaluation
+
+Detection retains `label` for color and adds `shape`. New schema-v2 annotations
+require rectangle/circle/triangle explicitly. Predictions can also be unknown.
+Two-argument Detection construction and schema-v1 annotations default to rectangle
+for backward compatibility; new datasets never rely on that default.
+
+The generator renders geometry independently of the detector. Each nonempty
+scene has 3–6 separated objects, both colors and all shapes. Seeded variation
+changes color values, sizes, positions and lighting/background conditions.
+Image 001 is deliberately a six-object showcase covering all color/shape pairs.
+
+Evaluation requires equal color AND shape before maximum-cardinality one-to-one
+IoU≥0.5 matching. A wrong shape therefore creates an FP and an FN even when
+color and total counts are correct. Reports include total and marginal color/
+shape counts, per-condition metrics, per-color/per-shape TP/FP/FN and all boxes.
+
+## Modules and reproducibility
+
+CLI coordinates loading, validated parameters, detector calls and output.
+Visualization and reporting render decisions; diagnostics exposes development
+mask stages without accepting final data. Scripts reproduce the workflow,
+export the development showcase and generate limitations demonstrations.
+
+The freeze hashes Python files in quality_inspection/, config bytes and exact
+Python/OpenCV/NumPy versions. Tests, helper scripts and Markdown are reviewed
+through Git rather than included in that fingerprint. Evaluations record image
+and annotation hashes. This is provenance checking, not secret benchmark protection.

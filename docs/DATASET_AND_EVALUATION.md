@@ -1,90 +1,91 @@
 # Dataset and evaluation protocol
 
-## Fixed scope
+## Synthetic design
 
-Synthetic top-down rectangular tiles in two color classes. No touching,
-occlusion, perspective distortion or defect classification. Object dimensions
-are sampled at 45–80 by 30–55 pixels before rotation and integer rasterization.
-Six separated placement cells prevent overlaps. An empty scene occurs at every
-seventh image index, including index zero: 3/15 development and 5/30 final images.
+Red/blue rectangles, circles and equilateral triangles in 480×360 images.
+Shapes are flat filled geometry, not photographs. There are no touching parts,
+occlusion, perspective or defect labels. Placement in six separated cells keeps
+bounding boxes apart.
 
-| Condition | Change from nominal | Development | Final |
+Development uses seed **31415**, 15 images; final uses seed **271828**, 30 images.
+These are new seeds and datasets, separate from the earlier rectangle experiment.
+Both use the same generation rules. An empty scene occurs at indices divisible
+by seven: 3/15 development and 5/30 final images. Nonempty scenes contain 3–6
+parts, both colors and every shape. Index 001 has six parts, covering all six
+color/shape combinations for a stable presentation example.
+
+Rectangles have sampled width 60–80 and height 35–55 pixels before rasterization.
+Circles use radius floor(width/2); triangles use circumradius width/2.
+Triangles/circles therefore do not share the rectangle height parameter.
+Boxes come from each rendered binary geometry mask before lighting/noise changes.
+
+| Condition | Variation | Development | Final |
 |---|---|---:|---:|
-| nominal | Gray background; small pixel noise | 3 | 6 |
-| rotation | Part angles sampled from −60° to +60° | 3 | 6 |
-| dim | Whole-image intensity gain 0.25–0.55 | 3 | 6 |
-| bright | Gain 1.3–1.7, with clipping at 255 | 3 | 6 |
-| blue_background | Blue background with varying saturation/value | 3 | 6 |
+| nominal | Gray background, small pixel noise | 3 | 6 |
+| rotation | Rectangle/triangle angles −60° to +60°; circles invariant | 3 | 6 |
+| dim | Global intensity gain 0.25–0.55 | 3 | 6 |
+| bright | Gain 1.3–1.7 and clipping at 255 | 3 | 6 |
+| blue_background | Varying blue background saturation/value | 3 | 6 |
 
-Gaussian pixel noise has standard deviation 2 after intensity scaling. Colors,
-sizes, positions and object counts vary independently across images; condition
-results are descriptive, not paired causal estimates. Six final images per
-condition support a small demonstration, not a precise generalization estimate.
-Generation seeds are fixed in source for reproducibility; the split separation
-is a development protocol, not secret benchmark protection. Final images were
-generated only after freezing; they were not used for threshold selection.
+Gaussian pixel noise has standard deviation 2. Balanced coverage makes these
+small scenes educational; it is not a realistic production frequency model.
+Condition groups vary in counts/colors/shapes, so they are not paired causal
+experiments. Six images per condition cannot establish broad generalization.
 
-## Annotation convention
+## Annotation format
 
-`annotations.json` has schema version 1, `synthetic`, `split`, `seed`, and an
-`images` list. Each image has a relative file path, width, height, condition and
-an `objects` list. Each object has `label` (`red` or `blue`) and `bbox`.
+Schema version **2** stores synthetic, split, seed and images metadata.
+Each object has a color `label`, a `shape`, and `bbox`:
 
 ```json
-{
-  "file": "images/001_nominal.png",
-  "width": 480,
-  "height": 360,
-  "condition": "nominal",
-  "objects": [{"label": "red", "bbox": [40, 30, 60, 40]}]
-}
+{"label": "blue", "shape": "triangle", "bbox": [40, 30, 60, 50]}
 ```
 
-This fragment illustrates the schema, not a claimed label for that actual file.
-Coordinates are integer **[x, y, width, height]**, origin at the top left, x to
-the right, y downward. Boxes cover `[x, x + width)` and `[y, y + height)`.
-The last included pixel is `(x + width − 1, y + height − 1)`. Boxes are tight,
-axis-aligned enclosures of the rasterized geometry, even for rotated tiles.
-No annotation confidence scores or defect labels are used. Negative scenes
-have an empty `objects` list. No objects are ignored because they became dim.
+This is a format example, not a claimed label for a particular file.
+Boxes are integer [x,y,width,height], origin top left, x rightward, y downward.
+They cover [x,x+width) and [y,y+height). Ground-truth shapes must be rectangle,
+circle or triangle. Detections may use unknown; unknown never matches a supported
+ground-truth shape.
 
-## One-to-one detection evaluation
+A zero-object scene has an empty objects list. Labels describe physical presence,
+even if lighting makes segmentation difficult. Legacy schema-v1 rectangles and
+two-argument Detection calls remain supported; v2 rejects missing shape labels.
 
-1. Match only boxes with the same class and IoU ≥ **0.5**, fixed before evaluation.
-2. IoU is intersection area / union area using the half-open box convention.
-3. Use maximum-cardinality bipartite matching so valid matches are not lost to a
-   greedy assignment. Visit higher IoUs first; the objective is match count,
-   not maximum total IoU. No confidence ranking or average precision is claimed.
-4. Each matched pair is one true positive (TP). Unmatched predictions are false
-   positives (FP); unmatched annotated objects are false negatives (FN).
-5. Duplicate boxes cannot match the same object twice. A wrong class can yield
-   both one FP and one FN even when the total count happens to be correct.
+## Matching and metrics
 
-Precision = TP / (TP + FP). Recall = TP / (TP + FN).
-F1 = 2TP / (2TP + FP + FN). Sum counts across images for micro metrics.
-Undefined denominators are JSON `null` and displayed as `undefined`.
-These definitions do not use true negatives or a loosely defined "accuracy".
+Only pairs with the same **color and shape** and IoU ≥ **0.5** can match.
+IoU = intersection area / union area under half-open coordinates. Maximum-
+cardinality bipartite matching maximizes valid pair count, visiting larger IoUs
+first; it does not maximize summed IoU or compute average precision.
 
-Count error is predicted total minus annotated total. Count MAE is the mean
-absolute count error per image. Report exact total counts and exact per-color
-counts separately. Neither implies correct object locations.
+Each pair is one TP. Unmatched predictions are FP; unmatched objects are FN.
+Duplicates cannot match the same object twice. Wrong shape or wrong color can
+produce both an FP and an FN despite a correct total count.
 
-## Experimental sequence
+- Precision = TP/(TP+FP).
+- Recall = TP/(TP+FN).
+- F1 = 2TP/(2TP+FP+FN).
+- Count error = predicted total − annotated total.
+- Count MAE = mean absolute count error per image.
 
-Used all 15 development images for implementation and threshold choices. Kept
-the baseline, diagnosed errors and preserved before/after evidence. Ran tests,
-froze code/configuration/environment, generated 30 final images and evaluated.
-A clean replay verified the same results. Three separate post-evaluation stress
-demonstrations exposed limitations without changing parameters. An independent
-student improvement remains a future exercise, not a completed contribution.
+Metrics are micro-aggregated; zero denominators are undefined (JSON null).
+Exact-count images require correct total counts.
+**Color-count accuracy** is the fraction of images with the entire red/blue
+count vector correct. **Shape-count accuracy** requires the entire rectangle/
+circle/triangle/unknown vector correct; truth unknown count is always zero.
+These metrics include blank scenes. They are image-level marginal count metrics,
+not object classification accuracy; correct marginal counts do not guarantee
+correct color-shape associations or localization.
 
-Final JSON records include source/configuration hashes, library versions,
-annotation and image hashes, predictions, ground truth, matching indices, every
-image's errors, condition summaries, and per-color TP/FP/FN. PNG comparisons
-show ground truth above predictions. Read `results.json` to identify individual
-unmatched objects; do not infer correctness from the counts alone.
+## Frozen experiment
 
-Write the report interpretation after inspecting actual results. Preserve
-failures even if embarrassing. Future tuning after observing the final set
-needs a new independently held-out set; a different seed alone is not proof
-of independence if chosen based on favorable results.
+Reused the previous development-selected HSV settings and checked fixed shape
+heuristics on the new development data and regression tests. Compared the old
+color-threshold baseline on the new data as an ablation. Then froze the new
+package/config/runtime before generating or inspecting the new final images.
+No code or parameter tuning followed final evaluation.
+
+A clean replay reproduced the complete results JSON. Replaying the same seed
+is reproducibility, not another independent trial. Generator seeds are public;
+holdout separation is a documented workflow. Future tuning needs fresh final
+data, not relabeling or repeatedly testing the observed set.

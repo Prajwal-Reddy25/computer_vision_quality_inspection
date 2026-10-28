@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "synthetic": true,
   "split": "development",
   "purpose": "post-evaluation limitations demonstration; not used for tuning",
@@ -13,6 +13,7 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
             30,
             30,
@@ -30,6 +31,7 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
             40,
             40,
@@ -47,6 +49,7 @@
       "objects": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
             40,
             40,

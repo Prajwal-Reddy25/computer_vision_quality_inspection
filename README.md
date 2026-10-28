@@ -1,34 +1,24 @@
 # Computer Vision Quality Inspection
 
-A small Python/OpenCV program that counts and locates isolated **red and blue
-rectangular parts** using HSV thresholds, morphology and contours. It saves
-class-labeled bounding boxes, per-color counts and annotated images.
+A small **AI-assisted Python/OpenCV project** for synthetic part inspection.
+It detects **red and blue rectangles, circles and triangles**, counts them,
+and saves color/shape labels, bounding boxes and annotated images.
 
-**All images are synthetic.** This is a color/count/location inspection exercise,
-not a defect classifier or evidence of real-camera or industrial validation.
-The code and experiments were implemented with AI assistance under student-defined
-requirements; see the [contribution record](docs/CONTRIBUTIONS.md).
+All images are **synthetic**. The project demonstrates classical image processing
+and reproducible evaluation; no real-camera or industrial validation is claimed.
+See the [contribution record](docs/CONTRIBUTIONS.md) for authorship.
 
-## Results
+## Example: six objects, two colors, three shapes
 
-Parameters were selected on **15 development images**, then frozen before the
-separate **30-image evaluation set** was generated (seed `92173`). At same-class,
-one-to-one bounding-box IoU ≥ 0.5:
+This fixed development example contains one red and one blue instance of every
+shape. **Ground Truth** and **Prediction** are separate images; labels are visible
+on each object. The images below are executed outputs, not mockups.
 
-| Final synthetic evaluation | Result |
-|---|---:|
-| Annotated objects | 74 |
-| TP / FP / FN | 74 / 0 / 0 |
-| Precision / recall / F1 | 1.000 / 1.000 / 1.000 |
-| Exact per-color counts | 30 / 30 images |
-| Count MAE | 0.000 objects/image |
+![Ground Truth: six synthetic red and blue rectangles, circles and triangles](examples/showcase_ground_truth.png)
 
-Conditions are nominal lighting, rotation, dim lighting, bright lighting and blue
-background, with six images each. These results reflect a small, controlled
-generator. They do not estimate performance on real photographs. The
-[engineering report](docs/EVALUATION.md) records development failures and
-separate stress demonstrations where the frozen detector fails.
+![Prediction: detected colors, shapes and bounding boxes for the same six objects](examples/showcase_prediction.png)
 
+<<<<<<< HEAD
 ### Example detections
 
 **Four parts in one evaluation image.** The top panel shows synthetic ground-truth
@@ -40,107 +30,128 @@ boxes; the bottom shows the detector predictions from the frozen evaluation.
 part localization on a synthetic development image.
 
 ![Red and blue synthetic parts with detected bounding boxes](examples/predictions/001_nominal.png.annotated.png)
+=======
+[Original input](examples/images/showcase.png) · [Annotations](examples/annotations.json)
+· [Detections](examples/detections.json)
+>>>>>>> 444056a (Add classical shape inspection and reproducible mixed-object evaluation)
 
-## Setup
+## Measured results
 
-Tested on CPython **3.12.3**, Linux x86_64. From the repository root:
+Selected parameters on 15 development images, then froze code/configuration
+before generating a new 30-image final set. Matching requires **correct color,
+correct shape and IoU ≥ 0.5**, with one-to-one assignment.
+
+| Synthetic dataset | Objects | TP / FP / FN | Precision / recall / F1 | Exact total counts | Color-count accuracy | Shape-count accuracy |
+|---|---:|---|---|---|---|---|
+| Development, 15 images | 56 | 56 / 0 / 0 | 1.000 / 1.000 / 1.000 | 15/15 | 100% | 100% |
+| Frozen final, 30 images | 110 | 110 / 0 / 0 | 1.000 / 1.000 / 1.000 | 30/30 | 100% | 100% |
+
+Count accuracy means every entry in the image's color or shape count vector is
+correct, including empty scenes. It is not object-level classification accuracy.
+Final count MAE was 0. All 57 red and 53 blue objects matched: 36 rectangles,
+37 circles and 37 triangles. Each of five conditions has six final images:
+nominal, rotation, dim, bright and blue background.
+
+These favorable results describe a small controlled generator, not arbitrary
+photographs. [Evaluation and failures](docs/EVALUATION.md) includes the historical
+color-threshold baseline on the new data and separate stress demonstrations.
+
+## Setup and inspection
+
+Tested with CPython 3.12.3 on Linux x86_64:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements-lock.txt
 python -m pytest -q -rs
-```
-
-The pinned environment uses NumPy 2.5.4, OpenCV 4.14.0.94 and pytest 9.2.0.
-`requirements.txt` also provides version ranges for other environments, which
-may require a new freeze record. No GUI or display server is needed.
-If a sourced ROS environment injects unrelated pytest plugins, prefix commands
-with `env -u PYTHONPATH` to clear that inherited import path.
-
-## Process images
-
-```bash
 python -m quality_inspection inspect --images examples/images --output runs/sample_inspection
 ```
 
-The CLI reads supported PNG/JPEG/BMP/TIFF files directly inside one directory.
-It writes one `*.annotated.png` per input and `detections.json` containing counts,
-classes and `[x, y, width, height]` boxes. Use `--config path/to/config.json` to
-select a configuration. Unreadable images fail with an explanatory error.
-Output commands refuse nonempty destinations: choose a fresh path for a new run.
-Existing full datasets may already be present in a working copy.
+Only Python, OpenCV, NumPy and pytest are needed. There is no deep learning,
+tracking, GUI, database or dashboard. The CLI reads PNG/JPEG/BMP/TIFF files
+directly inside one directory and writes annotated PNGs plus detections.json,
+including total, color and shape counts.
 
-## Reproduce the experiment
+Use a fresh output directory for each run; commands refuse nonempty destinations.
+If a sourced ROS setup injects unrelated pytest plugins, prefix Python commands
+with `env -u PYTHONPATH`. The pinned versions are NumPy 2.5.4, OpenCV 4.14.0.94
+and pytest 9.2.0. requirements.txt provides broader version ranges.
 
-```bash
-python -m quality_inspection generate --output data/development
-python -m quality_inspection evaluate --annotations data/development/annotations.json --config config/baseline.json --output runs/baseline
-python -m quality_inspection evaluate --annotations data/development/annotations.json --output runs/development
-python -m quality_inspection generate --split evaluation --frozen evidence/frozen.json --output data/evaluation
-python -m quality_inspection evaluate --annotations data/evaluation/annotations.json --frozen evidence/frozen.json --output runs/evaluation_replay
-```
+## Reproduce
 
-`evidence/frozen.json` is the preserved original freeze. Its package-source,
-configuration and exact runtime-version hashes must match. A replay reproduces
-the same already-observed final set; it is not a fresh holdout experiment.
-For automatic verification in a temporary clean source copy:
+New development seed: **31415**. New final seed: **271828**. Existing local data
+may already be generated; skip completed steps or choose new paths.
 
 ```bash
+python -m quality_inspection generate --output data/shapes_development
+python -m quality_inspection evaluate --annotations data/shapes_development/annotations.json --output runs/development
+python -m quality_inspection generate --split evaluation --frozen evidence/frozen.json --output data/shapes_evaluation
+python -m quality_inspection evaluate --annotations data/shapes_evaluation/annotations.json --frozen evidence/frozen.json --output runs/final_replay
 python scripts/verify_workflow.py
 ```
 
-This runs all **48 tests**, generation, label rendering, directory inspection,
-development evaluation and final evaluation, then compares the complete final
-results JSON against the recorded experiment. The clean replay has been executed
-successfully. All nine original detector cases run, with no skips.
-The original test files were preserved.
+The verification script runs all **81 tests** in a temporary clean source copy,
+regenerates data, renders labels, inspects images, exports the showcase and
+compares the complete final results JSON exactly against the recorded experiment.
+It has been executed successfully. All 48 pre-upgrade tests remain unchanged.
 
-For a future experiment, develop on development data, run tests, then create a
-new record with `freeze --development ... --output ...` before generating new
-holdout data. After observing a holdout, do not tune against it and describe
-the result as an unbiased first evaluation.
+The preserved freeze requires matching package/configuration/runtime hashes.
+A replay uses already-observed final images and is not a new independent
+experiment. Future algorithm changes need development data and a fresh holdout:
+freeze with `freeze --development ... --output ...` before final generation.
+Never tune against the final set and report the improved run as an unbiased first result.
 
-## Design and repository
+To reproduce the README assets into a fresh directory:
+
+```bash
+python -m scripts.export_examples --annotations data/shapes_development/annotations.json --output runs/showcase
+```
+
+## Design
 
 ```text
 quality_inspection/
-  detector.py       Validate → HSV → masks → morphology → contours → boxes
-  config.py         Validate JSON parameters
-  models.py         Detection(label, bbox)
-  dataset.py        Synthetic images and annotations
-  evaluation.py     One-to-one matching and metrics
-  visualization.py Image I/O and overlays
-  reporting.py      Markdown evaluation report
-  diagnostics.py    Development masks and HSV observations
+  detector.py        HSV masks, morphology, contours, shape rules and boxes
+  models.py          Detection(color label, box, shape)
+  dataset.py         Synthetic geometry and schema-v2 annotations
+  evaluation.py     Joint color/shape matching and count metrics
   cli.py            generate / labels / inspect / freeze / evaluate
-config/             Initial baseline and selected configuration
-tests/              Contract, boundary, matching and integration checks
-examples/           Two synthetic development inputs and ground-truth previews
-evidence/           Frozen record, measured results, failures and example outputs
-scripts/            Clean replay and reproducible stress examples
-docs/               Evaluation, architecture, learning guide, CV and release draft
+  config.py         Parameter validation
+  visualization.py  Image I/O and labeled overlays
+  reporting.py      Markdown metric reports
+  diagnostics.py    Development-only masks and HSV observations
+tests/              Original regression tests plus shape/showcase coverage
+examples/           Stable six-object input, labels and separate output images
+evidence/           Freeze, full results/annotations and representative failures
+scripts/            Clean replay, showcase export and stress generation
+docs/               Architecture, evaluation, CV, learning and release notes
 ```
 
-Only Python, OpenCV, NumPy and pytest are needed. There is no neural network,
-tracking system, database or web interface. See [architecture](docs/ARCHITECTURE.md)
-and the [annotation/evaluation protocol](docs/DATASET_AND_EVALUATION.md).
+Shape rules use polygon approximation: three convex vertices indicate a triangle;
+four with sufficient rotated-rectangle fill indicate a rectangle; other convex
+approximations with at least five vertices and sufficient circularity indicate
+a circle. Unrecognized geometry is reported as `unknown`, not forced into a class.
+See [architecture](docs/ARCHITECTURE.md) and [annotation/metric definitions](docs/DATASET_AND_EVALUATION.md).
 
-## Limitations and further learning
+## Limitations and portfolio notes
 
-- Same-color parts that touch can become one contour.
-- A background within the part's HSV range can become one large false detection.
-- Parts below the configured contour-area cutoff are intentionally rejected.
-- A dark marking can split one physical part into two foreground components.
-- Thresholds and area cutoffs depend on illumination, camera response and scale.
-- Perspective, occlusion, realistic reflections and real cameras were not tested.
-- Public generator seeds make separation a documented workflow, not a secret benchmark.
+Touching parts may merge; markings may split contours; small parts are removed
+by the area cutoff. Same-color backgrounds, clipping and shadows can defeat HSV
+segmentation. Shape heuristics can confuse rounded polygons or ellipses with
+circles, and some quadrilaterals with rectangles. No occlusion, perspective,
+realistic optics or real-camera testing is claimed.
 
-See [recorded failures and results](docs/EVALUATION.md),
-[validation](docs/VALIDATION.md), [learning and interview guide](docs/LEARNING_GUIDE.md),
-and [CV wording](docs/CV.md). Full generated datasets, virtual environments and
-scratch runs are ignored by Git. Selected evidence is retained deliberately.
+[Learning guide](docs/LEARNING_GUIDE.md) · [CV wording](docs/CV.md) ·
+[Completion report](docs/COMPLETION_REPORT.md) · [Validation](docs/VALIDATION.md) ·
+[Proposed v1.1.0 notes](docs/RELEASE_v1.1.0.md)
 
+<<<<<<< HEAD
 The repository is now publicly available on GitHub. The
 [original release draft](docs/RELEASE_v1.0.0.md) predates publication and is
 retained as a historical planning document, not as current push instructions.
+=======
+Implementation and experiments are AI-assisted; independent student implementation
+has not been demonstrated. Dataset scratch files and checkpoints are ignored.
+No push, tag or release is performed as part of this upgrade; publication requires approval.
+>>>>>>> 444056a (Add classical shape inspection and reproducible mixed-object evaluation)

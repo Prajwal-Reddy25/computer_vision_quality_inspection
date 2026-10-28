@@ -1,0 +1,685 @@
+{
+  "schema_version": 2,
+  "synthetic": true,
+  "split": "development",
+  "seed": 31415,
+  "images": [
+    {
+      "file": "images/000_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": []
+    },
+    {
+      "file": "images/001_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            372,
+            246,
+            71,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            205,
+            44,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            367,
+            64,
+            57,
+            50
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            205,
+            242,
+            79,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            31,
+            225,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            48,
+            57,
+            63,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/002_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            361,
+            40,
+            69,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            212,
+            256,
+            71,
+            37
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            46,
+            54,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            369,
+            223,
+            71,
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/003_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            385,
+            248,
+            62,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            45,
+            240,
+            73,
+            85
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            201,
+            57,
+            61,
+            61
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/004_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            393,
+            68,
+            54,
+            60
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            366,
+            232,
+            89,
+            95
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            202,
+            228,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            213,
+            73,
+            56,
+            60
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            31,
+            227,
+            77,
+            79
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/005_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            35,
+            65,
+            67,
+            73
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            361,
+            228,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            204,
+            224,
+            62,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            373,
+            56,
+            79,
+            85
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            38,
+            229,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            226,
+            64,
+            50,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/006_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            368,
+            49,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            202,
+            222,
+            69,
+            59
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            352,
+            254,
+            75,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            51,
+            55,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            201,
+            58,
+            55,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            49,
+            240,
+            63,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/007_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": []
+    },
+    {
+      "file": "images/008_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            377,
+            246,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            375,
+            48,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            199,
+            60,
+            75,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/009_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            42,
+            223,
+            61,
+            54
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            372,
+            72,
+            71,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            358,
+            248,
+            65,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/010_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            377,
+            231,
+            55,
+            48
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            44,
+            76,
+            65,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            369,
+            69,
+            61,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            218,
+            228,
+            67,
+            58
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            36,
+            250,
+            73,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            211,
+            51,
+            63,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/011_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            30,
+            59,
+            79,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            203,
+            236,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            213,
+            44,
+            67,
+            58
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            360,
+            77,
+            69,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            377,
+            241,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            45,
+            230,
+            53,
+            46
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/012_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            359,
+            54,
+            75,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            196,
+            225,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            365,
+            232,
+            65,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            209,
+            74,
+            81,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/013_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            375,
+            246,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            48,
+            226,
+            63,
+            54
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            42,
+            76,
+            65,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            361,
+            62,
+            73,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/014_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": []
+    }
+  ]
+}

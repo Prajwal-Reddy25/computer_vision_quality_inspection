@@ -24,4 +24,11 @@ def load_config(path: str | Path) -> dict:
             raise ValueError(f"{name} must be a nonnegative integer")
     if config["kernel_size"] < 1 or config["kernel_size"] % 2 == 0:
         raise ValueError("kernel_size must be positive and odd")
+    shape = config["shape"]
+    for name in ("epsilon_ratio", "min_circularity", "min_rectangle_fill"):
+        value = shape[name]
+        if type(value) not in (int, float) or not 0 < value <= 1:
+            raise ValueError(f"shape.{name} must lie in (0, 1]")
+    if shape["epsilon_ratio"] >= 0.1:
+        raise ValueError("shape.epsilon_ratio must be below 0.1")
     return config

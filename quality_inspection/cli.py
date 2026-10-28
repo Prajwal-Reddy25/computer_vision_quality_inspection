@@ -15,7 +15,7 @@ from .config import load_config
 from .dataset import generate_dataset, load_annotations
 from .detector import detect_objects
 from .evaluation import evaluate_image, summarize
-from .models import Detection, LABELS
+from .models import Detection, LABELS, PREDICTED_SHAPES
 from .reporting import write_report
 from .visualization import annotate, read_image, save_image
 
@@ -88,7 +88,8 @@ def labels(args: argparse.Namespace) -> None:
     _, samples = annotated_samples(args.annotations)
     output = prepare_output(args.output)
     for row, image in samples:
-        truth = [Detection(obj["label"], tuple(obj["bbox"])) for obj in row["objects"]]
+        truth = [Detection(obj["label"], tuple(obj["bbox"]), obj.get("shape", "rectangle"))
+                 for obj in row["objects"]]
         save_image(output / (Path(row["file"]).name + ".labels.png"),
                    annotate(image, truth, "GROUND TRUTH (synthetic)"))
     print(f"Saved {len(samples)} label previews; these are not detector results")
@@ -112,8 +113,10 @@ def inspect(args: argparse.Namespace) -> None:
     for path, image, predictions in results:
         save_image(output / (path.name + ".annotated.png"), annotate(image, predictions))
         counts = Counter(p.label for p in predictions)
+        shapes = Counter(p.shape for p in predictions)
         rows.append({"file": path.name, "total_count": len(predictions),
                      "counts": {label: counts[label] for label in LABELS},
+                     "shape_counts": {shape: shapes[shape] for shape in PREDICTED_SHAPES},
                      "detections": [p.to_dict() for p in predictions]})
     write_json(output / "detections.json", {"fingerprint": fingerprint(args.config), "images": rows})
     print(f"Inspected {len(rows)} images; results saved at {output}")
@@ -145,7 +148,8 @@ def evaluate(args: argparse.Namespace) -> None:
     rendered = []
     for row, image in samples:
         predictions = validated_predictions(image, config)
-        truth = [Detection(obj["label"], tuple(obj["bbox"])) for obj in row["objects"]]
+        truth = [Detection(obj["label"], tuple(obj["bbox"]), obj.get("shape", "rectangle"))
+                 for obj in row["objects"]]
         result = evaluate_image(row["file"], row["condition"], predictions, truth)
         result["detections"] = [p.to_dict() for p in predictions]
         result["truth"] = [t.to_dict() for t in truth]
@@ -164,6 +168,11 @@ def evaluate(args: argparse.Namespace) -> None:
                                for c in sorted({r["condition"] for r in rows})},
               "by_class": {label: {key: sum(r["by_class"][label][key] for r in rows)
                                      for key in ("tp", "fp", "fn")} for label in LABELS},
+              "by_shape": {shape: {key: sum(r["by_shape"][shape][key] for r in rows)
+                                     for key in ("tp", "fp", "fn")} for shape in PREDICTED_SHAPES},
+              "matching_rule": "same color and shape; maximum-cardinality one-to-one IoU >= 0.5",
+              "dataset_seed": manifest.get("seed"),
+              "schema_version": manifest["schema_version"],
               "images": rows}
     output = prepare_output(args.output)
     for name, image in rendered:
@@ -175,7 +184,7 @@ def evaluate(args: argparse.Namespace) -> None:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(description="Synthetic red/blue part inspection")
+    parser = argparse.ArgumentParser(description="Synthetic red/blue rectangle, circle and triangle inspection")
     commands = parser.add_subparsers(dest="command", required=True)
     gen = commands.add_parser("generate", help="Generate synthetic annotated images")
     gen.add_argument("--split", choices=["development", "evaluation"], default="development")

@@ -24,7 +24,7 @@ def annotate(image: np.ndarray, detections: list[Detection], title: str = "Predi
         x, y, w, h = obj.bbox
         color = COLORS[obj.label]
         cv2.rectangle(result, (x, y), (x + w - 1, y + h - 1), color, 2)
-        cv2.putText(result, obj.label, (x, max(15, y - 5)),
+        cv2.putText(result, f"{obj.label} {obj.shape}", (x, max(15, y - 5)),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1, cv2.LINE_AA)
     cv2.putText(result, f"{title}: {len(detections)}", (10, 22),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1, cv2.LINE_AA)

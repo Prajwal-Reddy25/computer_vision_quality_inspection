@@ -1,83 +1,72 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "synthetic": true,
   "split": "development",
-  "seed": 1729,
+  "seed": 31415,
   "images": [
     {
-      "file": "images/001_nominal.png",
+      "file": "images/showcase.png",
       "width": 480,
       "height": 360,
       "condition": "nominal",
       "objects": [
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            54,
-            64,
-            75,
-            45
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            48,
-            250,
-            77,
-            57
-          ]
-        }
-      ]
-    },
-    {
-      "file": "images/003_rotation.png",
-      "width": 480,
-      "height": 360,
-      "condition": "rotation",
-      "objects": [
-        {
-          "label": "red",
-          "bbox": [
-            212,
-            49,
-            67,
-            67
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            201,
-            253,
-            79,
+            372,
+            246,
+            71,
             43
           ]
         },
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "circle",
           "bbox": [
-            370,
-            38,
-            75,
-            83
+            205,
+            44,
+            73,
+            73
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            37,
-            61,
-            65,
-            67
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            361,
-            244,
+            367,
+            64,
             57,
+            50
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            205,
+            242,
+            79,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            31,
+            225,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            48,
+            57,
+            63,
             55
           ]
         }

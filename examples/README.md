@@ -1,17 +1,19 @@
-# Synthetic development examples
+# Six-object synthetic showcase
 
-These two inputs are fixed-seed development examples, not photographs.
+The original image is copied from new development image 001 (seed 31415).
+It contains every color/shape pair exactly once: red/blue rectangles, circles
+and triangles. This is development data, not independent final performance evidence.
 
-| Example | Input | Ground-truth preview | Actual detector output |
-|---|---|---|---|
-| Nominal | [Input](images/001_nominal.png) | [Labels](ground_truth/001_nominal.png.labels.png) | [Prediction](predictions/001_nominal.png.annotated.png) |
-| Rotation | [Input](images/003_rotation.png) | [Labels](ground_truth/003_rotation.png.labels.png) | [Prediction](predictions/003_rotation.png.annotated.png) |
+![Ground Truth](showcase_ground_truth.png)
 
-Ground-truth previews are annotations, not predictions. The separate predictions
-directory contains real executed detector output and counts in detections.json.
-Both examples are development data, not independent final performance evidence.
-The annotation subset is compatible with the labels/evaluate commands.
+![Prediction](showcase_prediction.png)
 
-Regenerate the original development set from seed 1729 using the root README.
-The same filenames identify the inputs. For final representative inputs and
-ground-truth/prediction comparisons, see evidence/ and its README.
+The images are separate executed overlays, with explicit synthetic titles.
+Input: images/showcase.png. Ground truth: annotations.json (schema 2).
+Predictions: detections.json, including shapes and the package fingerprint.
+
+Reproduce into a fresh directory from the repository root:
+
+```bash
+python -m scripts.export_examples --annotations data/shapes_development/annotations.json --output runs/showcase
+```

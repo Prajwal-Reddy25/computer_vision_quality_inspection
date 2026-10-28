@@ -20,7 +20,7 @@ def main() -> None:
     environment.pop("PYTHONPATH", None)  # Do not inherit unrelated ROS pytest plugins.
     with tempfile.TemporaryDirectory(prefix="cv-inspection-replay-") as temporary:
         root = Path(temporary)
-        for directory in ("quality_inspection", "config", "tests"):
+        for directory in ("quality_inspection", "config", "tests", "scripts"):
             shutil.copytree(source / directory, root / directory,
                             ignore=shutil.ignore_patterns("__pycache__"))
         shutil.copyfile(source / "pytest.ini", root / "pytest.ini")
@@ -35,6 +35,8 @@ def main() -> None:
             "development/annotations.json", "--output", "labels")
         run("-m", "quality_inspection", "inspect", "--images", "development/images",
             "--output", "inspection")
+        run("-m", "scripts.export_examples", "--annotations", "development/annotations.json",
+            "--output", "showcase")
         run("-m", "quality_inspection", "evaluate", "--annotations",
             "development/annotations.json", "--output", "development_results")
         run("-m", "quality_inspection", "generate", "--split", "evaluation",

@@ -1,91 +1,82 @@
-# Evaluation and failure analysis
+# Color-and-shape evaluation
 
-All images are **synthetic**, generated with OpenCV/NumPy. No camera, robot or
-production line was tested. Results cover isolated rectangular red/blue tiles
-within the controlled generator.
+All images are **synthetic**. No real camera or manufacturing system was tested.
+The new benchmark covers red and blue rectangles, circles and triangles.
 
-## Method
+## Procedure and results
 
-Used 15 development images (seed 1729) to implement and select thresholds.
-Finalized code/configuration, ran tests, and froze source/config/runtime in
-[the freeze record](../evidence/frozen.json). Only then generated 30 final
-images (seed 92173). There was no tuning after the final run.
+Development: 15 images, seed 31415, 56 objects.
+Final: 30 new images, seed 271828, 110 objects.
+Code/configuration/runtime were frozen in [evidence/frozen.json](../evidence/frozen.json)
+before final generation. No final-driven tuning occurred.
 
-Ground truth is a class and tight axis-aligned box around each rendered tile.
-Same-class maximum-cardinality one-to-one matching at IoU ≥ 0.5 defines TP;
-unmatched predictions are FP and unmatched annotations are FN. Precision, recall
-and F1 are micro averages. See the [protocol](DATASET_AND_EVALUATION.md)
-for formulas and coordinate rules.
+Matching requires correct color AND shape plus IoU≥0.5, one-to-one.
+See the [metric definitions](DATASET_AND_EVALUATION.md).
 
-## Measured results
-
-| Set/configuration | Images | TP | FP | FN | Precision | Recall | F1 | Count MAE |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Development, baseline | 15 | 35 | 21 | 2 | 0.625 | 0.946 | 0.753 | 1.400 |
-| Development, rejected S≥180 candidate | 15 | 36 | 0 | 1 | 1.000 | 0.973 | 0.986 | 0.067 |
-| Development, selected | 15 | 37 | 0 | 0 | 1.000 | 1.000 | 1.000 | 0.000 |
-| Final, frozen selected configuration | 30 | 74 | 0 | 0 | 1.000 | 1.000 | 1.000 | 0.000 |
-
-Development results are tuning feedback. The final set has 25 nonempty and five
-empty images. Total and per-color counts were exact on 30/30 final images.
-All 34 red and 40 blue objects matched. Minimum matched IoU was approximately 0.9365.
-
-| Final condition | Images | Objects/TP | FP | FN | Precision | Recall | F1 |
+| Experiment | TP | FP | FN | Precision | Recall | F1 | Count MAE |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Nominal | 6 | 17 | 0 | 0 | 1.000 | 1.000 | 1.000 |
-| Rotation | 6 | 15 | 0 | 0 | 1.000 | 1.000 | 1.000 |
-| Dim | 6 | 18 | 0 | 0 | 1.000 | 1.000 | 1.000 |
-| Bright | 6 | 8 | 0 | 0 | 1.000 | 1.000 | 1.000 |
-| Blue background | 6 | 16 | 0 | 0 | 1.000 | 1.000 | 1.000 |
+| New development, historical HSV baseline | 45 | 1 | 11 | 0.9783 | 0.8036 | 0.8824 | 0.6667 |
+| New development, selected HSV + shape rules | 56 | 0 | 0 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
+| New frozen final | 110 | 0 | 0 | 1.0000 | 1.0000 | 1.0000 | 0.0000 |
 
-Evidence: [complete detections, truth and matches](../evidence/final/results.json),
-[generated report](../evidence/final/report.md), and
-[full final annotation manifest](../evidence/evaluation_annotations.json).
-That manifest's image paths refer to a regenerated dataset root.
-Six representative inputs/comparisons are published; replay generates all 30.
+The historical baseline uses the same new shape classifier with the old color
+bounds S≥120/V≥80. The selected configuration reuses prior development-selected
+HSV values; no new threshold search was performed. The comparison is an ablation,
+not evidence that changing polygon rules caused the color improvements.
 
-## Development failures and decisions
-
-V≥80 missed a dim blue tile with median value about 74; lowering V to 50
-recovered it. Blue backgrounds with saturation around 155–157 passed S≥120.
-One became a full-frame box, and an empty scene produced 20 false components.
-Blue S≥175 removed these errors. Red retained S≥120: the common S≥180 candidate
-lost a clipped bright red object with saturation near 170.
-
-![Synthetic baseline: count correct but location wrong](../evidence/development/baseline_013_blue_background.png.comparison.png)
-
-![Same synthetic scene with selected thresholds](../evidence/development/selected_013_blue_background.png.comparison.png)
-
-The [experiment log](EXPERIMENT_LOG.md) and development evidence preserve every
-candidate, raw/filtered masks, pixel observations and before/after comparisons.
-Hue bounds, 3×3 rectangular opening/closing, iterations and minimum contour area
-400 remained fixed.
-
-## Observed limitations outside the final set
-
-No FP or FN occurred on the final 30 images at IoU≥0.5. Three additional
-deterministic stress cases were evaluated afterward without any detector changes:
-
-| Synthetic stress case | Observed result | Cause |
+| Count metric | Development | Final |
 |---|---|---|
-| 20×20 blue part | No detection; 1 FN | Contour area 361 < 400 |
-| 5-pixel dark marking across a tile | 2 FP, 1 FN | Two boxes, each too small to match the full tile |
-| Highly saturated blue background | 1 FP, 1 FN; total count correct | Background and foreground share the accepted color range |
+| Exact total-count images | 15/15 | 30/30 |
+| Exact color-count images / accuracy | 15/15 / 100% | 30/30 / 100% |
+| Exact shape-count images / accuracy | 15/15 / 100% | 30/30 / 100% |
 
-![Synthetic dark-stripe failure, frozen detector](../evidence/stress/results/images/dark_stripe.png.comparison.png)
+Count accuracy measures full per-image marginal vectors, including empty scenes.
+Final has 25 nonempty and five empty scenes. All 57 red and 53 blue objects
+matched. By shape: 36 rectangles, 37 circles, 37 triangles. No unknown predictions.
+Minimum matched final IoU was approximately **0.8879**, illustrating small box
+changes from rasterization/morphology despite successful matching.
 
-Reproduce these demonstrations:
+| Final condition | Images | Objects / TP | FP | FN | Precision / recall / F1 |
+|---|---:|---:|---:|---:|---|
+| Nominal | 6 | 24 | 0 | 0 | 1.000 / 1.000 / 1.000 |
+| Rotation | 6 | 21 | 0 | 0 | 1.000 / 1.000 / 1.000 |
+| Dim | 6 | 20 | 0 | 0 | 1.000 / 1.000 / 1.000 |
+| Bright | 6 | 22 | 0 | 0 | 1.000 / 1.000 / 1.000 |
+| Blue background | 6 | 23 | 0 | 0 | 1.000 / 1.000 / 1.000 |
 
-```bash
-python scripts/make_stress_examples.py --output runs/stress_inputs
-python -m quality_inspection evaluate --annotations runs/stress_inputs/annotations.json --output runs/stress_results
-```
+Full [final results](../evidence/final/results.json),
+[generated report](../evidence/final/report.md), and
+[annotation manifest](../evidence/evaluation_annotations.json) are preserved.
+Manifest image paths refer to the regenerated dataset root.
+Representative comparisons are retained; replay generates all 30.
 
-These are separate post-evaluation demonstrations, not random holdout images
-or another generalization estimate. They motivated no changes.
+## Observed development failures in the color baseline
 
-Touching parts, perspective, occlusion, camera white balance, strong reflections
-and realistic textured backgrounds remain unvalidated. There are only six
-images per condition and they are not paired causal experiments. A new camera
-setup needs fresh labeled development and held-out images, with scale-aware
-area thresholds. Favorable synthetic results do not establish industrial suitability.
+- 006_dim: all six objects missed because the high V threshold rejected them.
+- 008_dim: all three objects missed.
+- 013_blue_background: a full-frame blue rectangle replaced two actual blue
+  objects (circle and rectangle): one FP, two FN. Two red objects still matched.
+
+Before/after comparisons and mask stages are retained in evidence/development/.
+No current final false positives or misses occurred at the stated criterion.
+These new results are separate from the old rectangle experiment in commit
+9aef72d; they should not be presented as a direct like-for-like improvement.
+
+## Limits and explicit failures
+
+The frozen pipeline was also run on three separate deterministic stress cases,
+without parameter changes: a 20×20 part is rejected (one FN); a five-pixel dark
+stripe creates two boxes (two FP, one FN); a saturated blue background becomes
+one full-frame box (one FP, one FN). They are outside the benchmark, not another
+random generalization estimate.
+
+Geometry heuristics can confuse ellipses or rounded regular polygons with
+circles, or some quadrilaterals with rectangles. Unknown geometry is retained
+as unknown when no rule passes; this is not a general-purpose shape recognizer.
+Touching parts may merge, shadows/markings may split shapes, and morphology may
+remove triangle tips or distort circular boundaries. Area depends on image scale.
+
+Balanced, isolated, filled synthetic shapes are deliberately easy. There are
+only six images per condition, no occlusion/perspective, and no real optics,
+material variation, texture or camera calibration. A real deployment requires
+new labeled photographs, development and holdout data, and fresh validation.

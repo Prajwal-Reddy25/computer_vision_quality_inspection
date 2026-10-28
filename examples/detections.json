@@ -1,0 +1,87 @@
+{
+  "synthetic": true,
+  "source": "images/001_nominal.png",
+  "fingerprint": {
+    "source_sha256": {
+      "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "cli.py": "b9a0948a603e3e3f34c6581077bb2bae83f297d6c5b7b54844ba5c5118064f20",
+      "config.py": "4828928c5828d3fc61adae745203058ea65c15fe54e3e5bf6cbc4483e9d4fd6e",
+      "dataset.py": "a73b7ef13053c27608634904d473381df57c7ffdd37ced6c28ebf707e2b55097",
+      "detector.py": "6d6d969970c24f27a3e875afb2dc65c7c1a3f9b111e0abfd299c92da39afb9f8",
+      "diagnostics.py": "cbce857bea8bef472c9ad4f8d9fab738cdca973adbb3d8be8b789561a949f41e",
+      "evaluation.py": "a8c2d1bb56ceac5ac3fc7dba84a37bd19ba52f0f1f2fcfa1da99129410a5d441",
+      "models.py": "9431c5b621214b7acbddff7d3732932272d8f5413cc637d0a2cb6b35ce1fca23",
+      "reporting.py": "b13391b08ab387f1c771a07b7931aa47e8658f2e5fc3a57a93e9d3fbd89635a1",
+      "visualization.py": "be2df88aeff43223f6860b938f707cfac7d0fe4218eec70b565fb32b275e7f3f"
+    },
+    "config_sha256": "daed7d1adee23484599f0b806d142360d48ceeb7431537845715b4770ebe9899",
+    "environment": {
+      "python": "3.12.3",
+      "opencv": "4.14.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "detections": [
+    {
+      "label": "blue",
+      "shape": "circle",
+      "bbox": [
+        206,
+        45,
+        71,
+        71
+      ]
+    },
+    {
+      "label": "blue",
+      "shape": "triangle",
+      "bbox": [
+        49,
+        58,
+        61,
+        54
+      ]
+    },
+    {
+      "label": "blue",
+      "shape": "rectangle",
+      "bbox": [
+        205,
+        242,
+        79,
+        47
+      ]
+    },
+    {
+      "label": "red",
+      "shape": "triangle",
+      "bbox": [
+        368,
+        65,
+        55,
+        49
+      ]
+    },
+    {
+      "label": "red",
+      "shape": "circle",
+      "bbox": [
+        32,
+        226,
+        75,
+        75
+      ]
+    },
+    {
+      "label": "red",
+      "shape": "rectangle",
+      "bbox": [
+        372,
+        246,
+        71,
+        43
+      ]
+    }
+  ]
+}

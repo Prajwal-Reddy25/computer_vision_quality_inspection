@@ -1,55 +1,56 @@
-# Completion report
+# Color-and-shape upgrade completion report
 
-## Implementation
+## Code changes
 
-Completed BGR image validation, HSV red/blue masks, rectangular opening/closing,
-external contours, inclusive minimum-area filtering, integer bounding boxes and
-deterministic ordering. Directory inspection saves counts, detections and
-annotated images. Evaluation saves matches/errors, condition/class summaries,
-comparisons and JSON/Markdown reports. Development diagnostics support mask
-and pixel inspection without using final labels for tuning.
+Added shape labels to Detection and schema-v2 annotations. Geometry generation
+now renders rectangles, circles and triangles with independent color labels,
+multiple parts and the previous five lighting/background conditions. New seeds
+31415/271828 separate this experiment from the old observed rectangle set.
 
-## Verified execution
+The detector preserves HSV/morphology/contour filtering and adds simple polygon,
+rotated-fill and circularity rules, with an unknown outcome for unsupported
+contours. Outputs include color/shape labels, total/color/shape counts and boxes.
+Matching now requires both labels. Reports add shape metrics and exact-vector
+color-count/shape-count accuracy.
 
-- 48 tests passed, zero skipped, in both original and fresh pinned environments.
-- All four original test files match the pre-implementation archive byte for byte.
-- Development baseline: 35 TP, 21 FP, 2 FN. Selected thresholds: 37/0/0.
-- Frozen final set: 30 synthetic images, 74 objects, 74 TP, 0 FP, 0 FN.
-- Precision/recall/F1: 1.000; count MAE: 0; correct per-color counts: 30/30 images.
-- Nominal/rotation/dim/bright/blue-background groups each contain six images.
-- Clean source replay regenerated all images/outputs and exactly matched the
-  complete final results JSON. No post-final tuning occurred.
-- Six representative final inputs/comparisons and actual development predictions
-  are retained. Local documentation links resolve; published PNGs are readable.
+The README has a stable six-object development example: both colors and all
+three shapes, with separate Ground Truth and Prediction PNGs and one blank line
+between the image Markdown lines.
 
-## Failures and limits
+## Executed verification
 
-Development investigation recovered a dim blue part and removed blue-background
-false positives. A rejected threshold candidate missed a bright red part.
-Separate frozen-detector stress cases show small-object rejection, splitting
-by a dark marking, and false localization on a same-color background. No real
-camera, manufacturing line or robotic integration was tested. See EVALUATION.md.
+- **81 passed, zero skipped**, in pinned and original environments.
+- All 48 pre-upgrade test cases/files preserved unchanged.
+- Added 33 cases for shapes/colors/rotation, mixed scenes, geometry rejection,
+  strict matching/counts, schema/config validation, integration and showcase assets.
+- Development: 15 images, 56 objects, 56 TP / 0 FP / 0 FN.
+- Final: 30 new images, 110 objects, 110 TP / 0 FP / 0 FN.
+- Precision/recall/F1: 1.000 for both sets.
+- Color-count accuracy and shape-count accuracy: 100% for both sets.
+- Exact total counts: 15/15 development, 30/30 final; count MAE zero.
+- Clean-source replay reproduced the complete final JSON and expected files.
+- No code or parameter tuning after freeze/final generation.
 
-## Portfolio and authorship
+## Limitations and authorship
 
-README, architecture, evaluation protocol/results, environment lock, release
-draft and contribution record are prepared. AI generated the code, tests and
-executed experiments under student-defined requirements. Independent student
-implementation/modification has not yet been demonstrated. CV.md provides two
-appropriately attributed bullets and the strongest verified result.
+All data is synthetic. Shape heuristics, HSV bounds and contour-area filtering
+are intentionally limited. Touching objects, shadows, small parts and similar
+backgrounds can fail; ellipses/polygons can confuse the shape rules.
+Real-camera or industrial robustness is not claimed.
 
-## Learning
+AI implemented this upgrade under student-defined scope and requirements.
+Independent student coding remains to be demonstrated. CV.md preserves this
+distinction.
 
-LEARNING_GUIDE.md explains the pipeline and supplies ten interview questions.
-Three independent exercises cover box centers, a controlled dark-stripe
-improvement, and metric/error checking. Record actual personal changes before
-strengthening independent-development claims.
+## Repository handoff
 
-## Git and publication
+Changed areas: models, dataset, detector, config, evaluation, CLI, visualization,
+reporting, export/replay/stress scripts, new tests, example assets, evidence and
+affected documentation. Previous tracked records are recoverable from commit
+9aef72d; an ignored local checkpoint also preserves old source and artifacts.
 
-Source, tests, documentation and evidence form the local implementation commit;
-use `git log -1 --oneline` for its identifier. The original scaffold checkpoint is retained under ignored artifacts/.
-Scratch runs, datasets, environments, caches and credential locations are excluded.
-No remote is configured. No push, tag or GitHub release has been performed.
-Proposed release: v1.0.0; publication instructions and approval requirements are
-in RELEASE_v1.0.0.md. Publishing remains the owner's decision.
+Recommended commit message:
+`Add classical shape inspection and reproducible mixed-object evaluation`
+
+This upgrade is left reviewable as local changes. No commit, push, tag or release
+was made for this upgrade. Proposed version: v1.1.0; publication needs approval.

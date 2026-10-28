@@ -40,8 +40,35 @@ def filter_mask(mask: np.ndarray, config: dict) -> np.ndarray:
     return result
 
 
+def classify_shape(contour: np.ndarray, config: dict) -> str:
+    """Classify a simple outer contour; unsupported geometry remains unknown.
+
+    Three convex approximated vertices indicate a triangle. Four indicate a
+    rectangle only if the contour fills its rotated minimum rectangle. Other
+    polygons with >=5 vertices need sufficient circularity to be called circles.
+    These heuristics describe the synthetic shapes, not arbitrary real parts.
+    """
+    area = cv2.contourArea(contour)
+    perimeter = cv2.arcLength(contour, True)
+    if area <= 0 or perimeter <= 0:
+        return "unknown"
+    settings = config["shape"]
+    polygon = cv2.approxPolyDP(contour, settings["epsilon_ratio"] * perimeter, True)
+    vertices = len(polygon)
+    if vertices == 3 and cv2.isContourConvex(polygon):
+        return "triangle"
+    if vertices == 4 and cv2.isContourConvex(polygon):
+        _, (width, height), _ = cv2.minAreaRect(contour)
+        if width * height > 0 and area / (width * height) >= settings["min_rectangle_fill"]:
+            return "rectangle"
+    circularity = 4 * np.pi * area / perimeter ** 2
+    if vertices >= 5 and cv2.isContourConvex(polygon) and circularity >= settings["min_circularity"]:
+        return "circle"
+    return "unknown"
+
+
 def detect_objects(bgr: np.ndarray, config: dict) -> list[Detection]:
-    """Return class-labeled boxes ordered by label, y, x, width, height.
+    """Return color/shape boxes ordered by color, y, x, width, height, shape.
 
     Accept a nonempty uint8 BGR image and a validated load_config dictionary.
     Reject invalid images with ValueError; return [] for valid blank scenes.
@@ -57,6 +84,6 @@ def detect_objects(bgr: np.ndarray, config: dict) -> list[Detection]:
         for contour in contours:
             if cv2.contourArea(contour) >= config["min_area"]:
                 box = tuple(int(value) for value in cv2.boundingRect(contour))
-                detections.append(Detection(label, box))
+                detections.append(Detection(label, box, classify_shape(contour, config)))
     return sorted(detections, key=lambda obj: (obj.label, obj.bbox[1], obj.bbox[0],
-                                                obj.bbox[2], obj.bbox[3]))
+                                              obj.bbox[2], obj.bbox[3], obj.shape))

@@ -6,17 +6,17 @@
     "source_sha256": {
       "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
       "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
-      "cli.py": "af1a0b976dba9640e72d6931d84eebaa632bb7de7a5e8ffa808747daf26190e5",
-      "config.py": "fcb1cda67384cf725b3389d937ad342585658933ec3d442feb69b3c0b678d0af",
-      "dataset.py": "0ecee511594491856d1addaf78653b9694052620e12fc031cc21245225d2e1db",
-      "detector.py": "baa36ff59304262483412a90ba7adb485b653ede9dde8d17bc83f6adc8c50003",
+      "cli.py": "b9a0948a603e3e3f34c6581077bb2bae83f297d6c5b7b54844ba5c5118064f20",
+      "config.py": "4828928c5828d3fc61adae745203058ea65c15fe54e3e5bf6cbc4483e9d4fd6e",
+      "dataset.py": "a73b7ef13053c27608634904d473381df57c7ffdd37ced6c28ebf707e2b55097",
+      "detector.py": "6d6d969970c24f27a3e875afb2dc65c7c1a3f9b111e0abfd299c92da39afb9f8",
       "diagnostics.py": "cbce857bea8bef472c9ad4f8d9fab738cdca973adbb3d8be8b789561a949f41e",
-      "evaluation.py": "c722b3ddedab55df42fbcde4d9cb48dd3bf19069b0422fb5ce2c5d7029f11135",
-      "models.py": "b744b331d43e76b028f5d4c47e9936b6767f351dd9d4fe03bc28507a28f2eaa9",
-      "reporting.py": "c87f8bd96e54020fbe8c0cfa0f33eb527422eeaf8e204bd860a17edfa0024244",
-      "visualization.py": "508cafd9bcb9ec2f90220712b17238ca3c11bfaf55a3fc38a151d3eb0dd2267d"
+      "evaluation.py": "a8c2d1bb56ceac5ac3fc7dba84a37bd19ba52f0f1f2fcfa1da99129410a5d441",
+      "models.py": "9431c5b621214b7acbddff7d3732932272d8f5413cc637d0a2cb6b35ce1fca23",
+      "reporting.py": "b13391b08ab387f1c771a07b7931aa47e8658f2e5fc3a57a93e9d3fbd89635a1",
+      "visualization.py": "be2df88aeff43223f6860b938f707cfac7d0fe4218eec70b565fb32b275e7f3f"
     },
-    "config_sha256": "2c168eaa1906442fb18c05b42debb57fe334dfbcd06490eeb01beefe78f5bf4a",
+    "config_sha256": "daed7d1adee23484599f0b806d142360d48ceeb7431537845715b4770ebe9899",
     "environment": {
       "python": "3.12.3",
       "opencv": "4.14.0",
@@ -69,25 +69,30 @@
     "kernel_size": 3,
     "open_iterations": 1,
     "close_iterations": 1,
-    "min_area": 400
+    "min_area": 400,
+    "shape": {
+      "epsilon_ratio": 0.03,
+      "min_circularity": 0.8,
+      "min_rectangle_fill": 0.85
+    }
   },
   "frozen": {
-    "frozen_at_utc": "2026-10-28T10:38:58.425907+00:00",
+    "frozen_at_utc": "2026-10-28T11:09:14.243546+00:00",
     "fingerprint": {
       "source_sha256": {
         "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
         "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
-        "cli.py": "af1a0b976dba9640e72d6931d84eebaa632bb7de7a5e8ffa808747daf26190e5",
-        "config.py": "fcb1cda67384cf725b3389d937ad342585658933ec3d442feb69b3c0b678d0af",
-        "dataset.py": "0ecee511594491856d1addaf78653b9694052620e12fc031cc21245225d2e1db",
-        "detector.py": "baa36ff59304262483412a90ba7adb485b653ede9dde8d17bc83f6adc8c50003",
+        "cli.py": "b9a0948a603e3e3f34c6581077bb2bae83f297d6c5b7b54844ba5c5118064f20",
+        "config.py": "4828928c5828d3fc61adae745203058ea65c15fe54e3e5bf6cbc4483e9d4fd6e",
+        "dataset.py": "a73b7ef13053c27608634904d473381df57c7ffdd37ced6c28ebf707e2b55097",
+        "detector.py": "6d6d969970c24f27a3e875afb2dc65c7c1a3f9b111e0abfd299c92da39afb9f8",
         "diagnostics.py": "cbce857bea8bef472c9ad4f8d9fab738cdca973adbb3d8be8b789561a949f41e",
-        "evaluation.py": "c722b3ddedab55df42fbcde4d9cb48dd3bf19069b0422fb5ce2c5d7029f11135",
-        "models.py": "b744b331d43e76b028f5d4c47e9936b6767f351dd9d4fe03bc28507a28f2eaa9",
-        "reporting.py": "c87f8bd96e54020fbe8c0cfa0f33eb527422eeaf8e204bd860a17edfa0024244",
-        "visualization.py": "508cafd9bcb9ec2f90220712b17238ca3c11bfaf55a3fc38a151d3eb0dd2267d"
+        "evaluation.py": "a8c2d1bb56ceac5ac3fc7dba84a37bd19ba52f0f1f2fcfa1da99129410a5d441",
+        "models.py": "9431c5b621214b7acbddff7d3732932272d8f5413cc637d0a2cb6b35ce1fca23",
+        "reporting.py": "b13391b08ab387f1c771a07b7931aa47e8658f2e5fc3a57a93e9d3fbd89635a1",
+        "visualization.py": "be2df88aeff43223f6860b938f707cfac7d0fe4218eec70b565fb32b275e7f3f"
       },
-      "config_sha256": "2c168eaa1906442fb18c05b42debb57fe334dfbcd06490eeb01beefe78f5bf4a",
+      "config_sha256": "daed7d1adee23484599f0b806d142360d48ceeb7431537845715b4770ebe9899",
       "environment": {
         "python": "3.12.3",
         "opencv": "4.14.0",
@@ -140,15 +145,20 @@
       "kernel_size": 3,
       "open_iterations": 1,
       "close_iterations": 1,
-      "min_area": 400
+      "min_area": 400,
+      "shape": {
+        "epsilon_ratio": 0.03,
+        "min_circularity": 0.8,
+        "min_rectangle_fill": 0.85
+      }
     },
-    "development_annotations_sha256": "cee1572aadf805cb0b224260f63ef7e51a2ff9cc6c2ddd1f6e28db83f6f79a84",
+    "development_annotations_sha256": "0d08dc5c262e9fa7c6800e3ed496b3e01a05231673f9a3254c80441c1c17c6e0",
     "iou_threshold": 0.5
   },
-  "annotations_sha256": "c3251c359d208bcc77bf8fa82812dd262de459d5720f60ff4e32aaa22aef7294",
+  "annotations_sha256": "6382e3344ebea944db3c777963d63f6374bc73de4f7d173f85cfdbb0bb9dbdf7",
   "overall": {
     "images": 30,
-    "tp": 74,
+    "tp": 110,
     "fp": 0,
     "fn": 0,
     "precision": 1.0,
@@ -156,12 +166,16 @@
     "f1": 1.0,
     "count_mae": 0.0,
     "exact_count_images": 30,
-    "exact_class_count_images": 30
+    "exact_class_count_images": 30,
+    "exact_color_count_images": 30,
+    "exact_shape_count_images": 30,
+    "color_count_accuracy": 1.0,
+    "shape_count_accuracy": 1.0
   },
   "by_condition": {
     "blue_background": {
       "images": 6,
-      "tp": 16,
+      "tp": 23,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
@@ -169,11 +183,15 @@
       "f1": 1.0,
       "count_mae": 0.0,
       "exact_count_images": 6,
-      "exact_class_count_images": 6
+      "exact_class_count_images": 6,
+      "exact_color_count_images": 6,
+      "exact_shape_count_images": 6,
+      "color_count_accuracy": 1.0,
+      "shape_count_accuracy": 1.0
     },
     "bright": {
       "images": 6,
-      "tp": 8,
+      "tp": 22,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
@@ -181,11 +199,15 @@
       "f1": 1.0,
       "count_mae": 0.0,
       "exact_count_images": 6,
-      "exact_class_count_images": 6
+      "exact_class_count_images": 6,
+      "exact_color_count_images": 6,
+      "exact_shape_count_images": 6,
+      "color_count_accuracy": 1.0,
+      "shape_count_accuracy": 1.0
     },
     "dim": {
       "images": 6,
-      "tp": 18,
+      "tp": 20,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
@@ -193,11 +215,15 @@
       "f1": 1.0,
       "count_mae": 0.0,
       "exact_count_images": 6,
-      "exact_class_count_images": 6
+      "exact_class_count_images": 6,
+      "exact_color_count_images": 6,
+      "exact_shape_count_images": 6,
+      "color_count_accuracy": 1.0,
+      "shape_count_accuracy": 1.0
     },
     "nominal": {
       "images": 6,
-      "tp": 17,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
@@ -205,11 +231,15 @@
       "f1": 1.0,
       "count_mae": 0.0,
       "exact_count_images": 6,
-      "exact_class_count_images": 6
+      "exact_class_count_images": 6,
+      "exact_color_count_images": 6,
+      "exact_shape_count_images": 6,
+      "color_count_accuracy": 1.0,
+      "shape_count_accuracy": 1.0
     },
     "rotation": {
       "images": 6,
-      "tp": 15,
+      "tp": 21,
       "fp": 0,
       "fn": 0,
       "precision": 1.0,
@@ -217,21 +247,50 @@
       "f1": 1.0,
       "count_mae": 0.0,
       "exact_count_images": 6,
-      "exact_class_count_images": 6
+      "exact_class_count_images": 6,
+      "exact_color_count_images": 6,
+      "exact_shape_count_images": 6,
+      "color_count_accuracy": 1.0,
+      "shape_count_accuracy": 1.0
     }
   },
   "by_class": {
     "red": {
-      "tp": 34,
+      "tp": 57,
       "fp": 0,
       "fn": 0
     },
     "blue": {
-      "tp": 40,
+      "tp": 53,
       "fp": 0,
       "fn": 0
     }
   },
+  "by_shape": {
+    "rectangle": {
+      "tp": 36,
+      "fp": 0,
+      "fn": 0
+    },
+    "circle": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0
+    },
+    "triangle": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 0
+    },
+    "unknown": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "matching_rule": "same color and shape; maximum-cardinality one-to-one IoU >= 0.5",
+  "dataset_seed": 271828,
+  "schema_version": 2,
   "images": [
     {
       "file": "images/000_nominal.png",
@@ -246,6 +305,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 0,
@@ -258,15 +323,438 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [],
       "unmatched_prediction_indices": [],
       "unmatched_truth_indices": [],
       "detections": [],
       "truth": [],
-      "input_sha256": "0283c8eef7ff5d8d1ea19f8da2727c306b0bd15ce541e0d7fd4a0ee546699183"
+      "input_sha256": "75c646551b76a8473a81e533ffb9216ee4469001a79b1c305f1213d1548f2b4a"
     },
     {
       "file": "images/001_nominal.png",
+      "condition": "nominal",
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 6,
+      "true_count": 6,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 0.9558993304086816
+        },
+        {
+          "prediction_index": 5,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 0.9487265980772475
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "iou": 0.9435606060606061
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 4,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 5,
+          "iou": 0.9444554651854791
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            356,
+            54,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            207,
+            58,
+            69,
+            60
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            208,
+            239,
+            73,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            42,
+            49,
+            53,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            51,
+            236,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            370,
+            250,
+            69,
+            45
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            206,
+            57,
+            71,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            370,
+            250,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            355,
+            53,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            41,
+            48,
+            55,
+            48
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            208,
+            239,
+            73,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            50,
+            235,
+            71,
+            71
+          ]
+        }
+      ],
+      "input_sha256": "7224717670808de104684e5da15ca1f745352a8b39ef89ec970847771e985c25"
+    },
+    {
+      "file": "images/002_nominal.png",
+      "condition": "nominal",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 4,
+          "truth_index": 0,
+          "iou": 0.9473777777777778
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.9456140350877194
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 3,
+          "iou": 0.9411895745154822
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 4,
+          "iou": 0.9548309178743961
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            370,
+            60,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            383,
+            233,
+            55,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            220,
+            66,
+            63,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            37,
+            223,
+            67,
+            59
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            200,
+            226,
+            73,
+            73
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            199,
+            225,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            382,
+            232,
+            57,
+            50
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            220,
+            66,
+            63,
+            37
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            369,
+            59,
+            67,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            36,
+            222,
+            69,
+            60
+          ]
+        }
+      ],
+      "input_sha256": "0c52544b326a247a238af3afc0f773828b8c860c5815affda5565f16b38b0566"
+    },
+    {
+      "file": "images/003_nominal.png",
       "condition": "nominal",
       "tp": 4,
       "fp": 0,
@@ -278,38 +766,66 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 0,
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
         "blue": {
-          "tp": 4,
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
           "fp": 0,
           "fn": 0
         }
       },
       "matches": [
         {
-          "prediction_index": 1,
+          "prediction_index": 3,
           "truth_index": 0,
-          "iou": 1.0
+          "iou": 0.9428691451375761
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.9489638107021342
         },
         {
           "prediction_index": 2,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 3,
           "truth_index": 2,
           "iou": 1.0
         },
         {
           "prediction_index": 0,
           "truth_index": 3,
-          "iou": 1.0
+          "iou": 0.9411895745154822
         }
       ],
       "unmatched_prediction_indices": [],
@@ -317,83 +833,304 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            210,
-            68,
-            73,
+            377,
+            67,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            383,
+            235,
+            59,
+            52
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            204,
+            52,
+            65,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            36,
+            239,
+            67,
+            67
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            35,
+            238,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            382,
+            234,
+            61,
+            53
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            204,
+            52,
+            65,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            376,
+            66,
+            67,
+            67
+          ]
+        }
+      ],
+      "input_sha256": "7f67755af4d2f67fc968db7922ab8710e4aeb3bdccf5d6005d967c136ca74740"
+    },
+    {
+      "file": "images/004_nominal.png",
+      "condition": "nominal",
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 6,
+      "true_count": 6,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.9452201933404941
+        },
+        {
+          "prediction_index": 5,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9394082840236686
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 3,
+          "iou": 0.9413453650533224
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 4,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 5,
+          "iou": 0.9355012093523246
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            217,
+            55,
+            55,
+            48
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            368,
+            228,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            254,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            381,
+            52,
+            59,
+            59
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            66,
+            71,
+            51,
             45
           ]
         },
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            35,
-            70,
-            69,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            43,
-            245,
-            77,
-            47
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            378,
+            38,
             262,
-            53,
-            37
+            67,
+            39
           ]
         }
       ],
       "truth": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            35,
-            70,
-            69,
-            43
+            216,
+            54,
+            57,
+            49
           ]
         },
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            43,
-            245,
-            77,
-            47
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            378,
+            38,
             262,
-            53,
-            37
+            67,
+            39
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            210,
-            68,
-            73,
-            45
+            367,
+            227,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            65,
+            70,
+            53,
+            46
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            254,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            380,
+            51,
+            61,
+            61
           ]
         }
       ],
-      "input_sha256": "b907811aa57f7fbabfaf51378d36b4db98c9f9133355e154f57e73fb59ed121a"
+      "input_sha256": "ad24a1a46d31a5f6ab0d8016466816dcc00b324d85c540526bd47d5e97e076e3"
     },
     {
-      "file": "images/002_nominal.png",
+      "file": "images/005_nominal.png",
       "condition": "nominal",
       "tp": 3,
       "fp": 0,
@@ -405,109 +1142,11 @@
         "red": 0,
         "blue": 0
       },
-      "by_class": {
-        "red": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 1,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 2,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 2,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            206,
-            78,
-            71,
-            31
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            37,
-            260,
-            77,
-            39
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            382,
-            246,
-            51,
-            33
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            37,
-            260,
-            77,
-            39
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            382,
-            246,
-            51,
-            33
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            206,
-            78,
-            71,
-            31
-          ]
-        }
-      ],
-      "input_sha256": "6ca149ae6a00babe93168a6b8e1b9a35c63e23cc0941ca48b5708e2c2a3162fd"
-    },
-    {
-      "file": "images/003_nominal.png",
-      "condition": "nominal",
-      "tp": 2,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 2,
-      "true_count": 2,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
       },
       "by_class": {
         "red": {
@@ -516,341 +1155,28 @@
           "fn": 0
         },
         "blue": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 1,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            32,
-            256,
-            73,
-            47
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            200,
-            240,
-            79,
-            53
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            32,
-            256,
-            73,
-            47
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            200,
-            240,
-            79,
-            53
-          ]
-        }
-      ],
-      "input_sha256": "0f5353eedc8ec9464918c6c383bfe7e992b47ed1666dd57c17394768b5f4f550"
-    },
-    {
-      "file": "images/004_nominal.png",
-      "condition": "nominal",
-      "tp": 4,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 4,
-      "true_count": 4,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
           "tp": 2,
           "fp": 0,
           "fn": 0
         }
       },
-      "matches": [
-        {
-          "prediction_index": 2,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 2,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 3,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            382,
-            64,
-            47,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            56,
-            66,
-            69,
-            33
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            356,
-            240,
-            75,
-            39
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            56,
-            258,
-            53,
-            31
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "red",
-          "bbox": [
-            356,
-            240,
-            75,
-            39
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            382,
-            64,
-            47,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            56,
-            66,
-            69,
-            33
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            56,
-            258,
-            53,
-            31
-          ]
-        }
-      ],
-      "input_sha256": "c88ea12b8805db475f0d377c8eb766dac099dc65b52e810843b0a702e34c8fa8"
-    },
-    {
-      "file": "images/005_nominal.png",
-      "condition": "nominal",
-      "tp": 4,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 4,
-      "true_count": 4,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 1,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 2,
-          "truth_index": 2,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 3,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            52,
-            62,
-            73,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            216,
-            252,
-            61,
-            53
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            374,
-            66,
-            65,
-            51
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            382,
-            243,
-            49,
-            45
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            216,
-            252,
-            61,
-            53
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            52,
-            62,
-            73,
-            41
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            374,
-            66,
-            65,
-            51
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            382,
-            243,
-            49,
-            45
-          ]
-        }
-      ],
-      "input_sha256": "98a6ab81d353bb6cfa52c5d1f840e00f0ad0a673e8d08207b3460f3db2534c61"
-    },
-    {
-      "file": "images/006_rotation.png",
-      "condition": "rotation",
-      "tp": 1,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
+      "by_shape": {
+        "rectangle": {
           "tp": 1,
           "fp": 0,
           "fn": 0
         },
-        "blue": {
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -860,34 +1186,274 @@
         {
           "prediction_index": 0,
           "truth_index": 0,
-          "iou": 0.9530791788856305
+          "iou": 0.9431334622823985
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9459560893225746
         }
       ],
       "unmatched_prediction_indices": [],
       "unmatched_truth_indices": [],
       "detections": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            356,
-            241,
-            91,
-            75
+            61,
+            55,
+            53,
+            46
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            42,
+            243,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            369,
+            76,
+            71,
+            45
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            60,
+            54,
+            55,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            369,
+            76,
+            71,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            41,
+            242,
+            73,
+            73
+          ]
+        }
+      ],
+      "input_sha256": "cdd7e290e6ffcf70c38e49ed83b28101c5ff4d75b63890f5c78d06bcd43a671d"
+    },
+    {
+      "file": "images/006_rotation.png",
+      "condition": "rotation",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 2,
+          "truth_index": 0,
+          "iou": 0.9459560893225746
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.92430426716141
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 2,
+          "iou": 0.9506172839506173
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 3,
+          "iou": 0.9444554651854791
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 4,
+          "iou": 0.8938492063492064
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            215,
+            59,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            372,
+            77,
+            47,
+            53
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            56,
+            43,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            199,
+            221,
+            79,
+            77
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            56,
+            262,
+            53,
+            51
           ]
         }
       ],
       "truth": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            355,
-            240,
-            93,
-            77
+            55,
+            42,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            370,
+            76,
+            49,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            198,
+            220,
+            81,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            214,
+            58,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            54,
+            261,
+            56,
+            54
           ]
         }
       ],
-      "input_sha256": "d845be56859cbceb87c0234f54be8ede9b0bce56de442544c29f6d9e4f9db5c0"
+      "input_sha256": "30ccb4177b9c302c04df0bdfacfd3c0b9aed1b67e87d44f928845709a6c20bc1"
     },
     {
       "file": "images/007_rotation.png",
@@ -902,6 +1468,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 0,
@@ -909,6 +1481,28 @@
           "fn": 0
         },
         "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -919,345 +1513,10 @@
       "unmatched_truth_indices": [],
       "detections": [],
       "truth": [],
-      "input_sha256": "4b33f492611d30269af82c4cd2040603566de09c86a6356f60f0319515cc8120"
+      "input_sha256": "a4878ba83b6089a2e8280e7c9f6caed8f9d52e9318ec1c802bcacb8e20c1245c"
     },
     {
       "file": "images/008_rotation.png",
-      "condition": "rotation",
-      "tp": 6,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 6,
-      "true_count": 6,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 4,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 1,
-          "truth_index": 0,
-          "iou": 0.9399676749018703
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 1,
-          "iou": 0.9504720631481195
-        },
-        {
-          "prediction_index": 5,
-          "truth_index": 2,
-          "iou": 0.9459154929577465
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 3,
-          "iou": 0.9498795180722892
-        },
-        {
-          "prediction_index": 4,
-          "truth_index": 4,
-          "iou": 0.9444554651854791
-        },
-        {
-          "prediction_index": 2,
-          "truth_index": 5,
-          "iou": 0.948051948051948
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            354,
-            46,
-            89,
-            69
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            210,
-            50,
-            69,
-            59
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            45,
-            52,
-            75,
-            73
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            35,
-            228,
-            81,
-            73
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            195,
-            226,
-            69,
-            69
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            361,
-            239,
-            73,
-            69
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            209,
-            49,
-            71,
-            61
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            353,
-            45,
-            91,
-            71
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            360,
-            238,
-            75,
-            71
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            34,
-            227,
-            83,
-            75
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            194,
-            225,
-            71,
-            71
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            44,
-            51,
-            77,
-            75
-          ]
-        }
-      ],
-      "input_sha256": "dc7dff48f409d6cfd326bda8e42ef2ffcd6e0056f5dc7809442cd5a392a99eec"
-    },
-    {
-      "file": "images/009_rotation.png",
-      "condition": "rotation",
-      "tp": 2,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 2,
-      "true_count": 2,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 0.9484133717970473
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 1,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            39,
-            57,
-            69,
-            81
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            43,
-            241,
-            79,
-            53
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            38,
-            56,
-            71,
-            83
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            43,
-            241,
-            79,
-            53
-          ]
-        }
-      ],
-      "input_sha256": "18192e668c55139f811be511b945a9d60dff1fc3f79d2e846967c28101d85d08"
-    },
-    {
-      "file": "images/010_rotation.png",
-      "condition": "rotation",
-      "tp": 2,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 2,
-      "true_count": 2,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 1,
-          "truth_index": 0,
-          "iou": 0.9365079365079365
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 1,
-          "iou": 0.9459560893225746
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "red",
-          "bbox": [
-            217,
-            243,
-            71,
-            71
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            52,
-            251,
-            61,
-            59
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "red",
-          "bbox": [
-            51,
-            250,
-            63,
-            61
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            216,
-            242,
-            73,
-            73
-          ]
-        }
-      ],
-      "input_sha256": "e979b10b6627a48dcc9c71f42846fa271c8a02839f8abbba11f4d2b020937ce5"
-    },
-    {
-      "file": "images/011_rotation.png",
       "condition": "rotation",
       "tp": 4,
       "fp": 0,
@@ -1269,14 +1528,42 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 3,
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
         "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
           "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
           "fp": 0,
           "fn": 0
         }
@@ -1285,22 +1572,22 @@
         {
           "prediction_index": 1,
           "truth_index": 0,
-          "iou": 0.9473403309019748
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 1,
-          "iou": 0.9459560893225746
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 2,
-          "iou": 0.9459560893225746
+          "iou": 0.9187986651835373
         },
         {
           "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 0.9440559440559441
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 0.9375157470395565
+        },
+        {
+          "prediction_index": 3,
           "truth_index": 3,
-          "iou": 0.9489643744821873
+          "iou": 0.8879023307436182
         }
       ],
       "unmatched_prediction_indices": [],
@@ -1308,97 +1595,274 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            365,
-            228,
-            71,
-            71
+            203,
+            235,
+            61,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            361,
+            238,
+            59,
+            56
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            42,
-            56,
-            71,
+            206,
+            47,
+            63,
             75
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            36,
-            229,
-            83,
-            69
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            208,
-            245,
-            71,
-            71
+            60,
+            243,
+            48,
+            50
           ]
         }
       ],
       "truth": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            41,
-            55,
-            73,
+            360,
+            236,
+            62,
+            58
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            205,
+            46,
+            65,
             77
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            364,
-            227,
-            73,
-            73
+            202,
+            234,
+            63,
+            63
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            207,
-            244,
-            73,
-            73
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            35,
-            228,
-            85,
-            71
+            58,
+            242,
+            51,
+            53
           ]
         }
       ],
-      "input_sha256": "a5792047d2a226dd68fa73dc33554756c08982b86a631b0823f8b7d5ae8bb4ae"
+      "input_sha256": "2baa1e8a1ad5c84772ef07796736d204c52eb9763e0a85543b9ce25cf15e1ed1"
     },
     {
-      "file": "images/012_dim.png",
-      "condition": "dim",
-      "tp": 1,
+      "file": "images/009_rotation.png",
+      "condition": "rotation",
+      "tp": 4,
       "fp": 0,
       "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
+      "predicted_count": 4,
+      "true_count": 4,
       "count_error": 0,
       "class_count_errors": {
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.9466666666666667
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 1,
+          "iou": 0.9500080115366127
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9401886358408098
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 3,
+          "iou": 0.9449505718162434
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            196,
+            50,
+            73,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            381,
+            56,
+            61,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            40,
+            51,
+            75,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            30,
+            223,
+            77,
+            77
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            195,
+            49,
+            75,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            29,
+            222,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            381,
+            55,
+            63,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            39,
+            50,
+            77,
+            67
+          ]
+        }
+      ],
+      "input_sha256": "a5802562bd44c84b2c931582ef1040d037ed053964d1d3c773e97e45ed99d179"
+    },
+    {
+      "file": "images/010_rotation.png",
+      "condition": "rotation",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
@@ -1408,11 +1872,43 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 0,
+          "prediction_index": 2,
           "truth_index": 0,
+          "iou": 0.9213541666666667
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
           "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9512269471117207
         }
       ],
       "unmatched_prediction_indices": [],
@@ -1420,26 +1916,394 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            220,
+            352,
+            76,
             81,
-            53,
             37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            39,
+            54,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            52,
+            244,
+            61,
+            58
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            50,
+            242,
+            64,
+            60
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            352,
+            76,
+            81,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            38,
+            53,
+            81,
+            81
+          ]
+        }
+      ],
+      "input_sha256": "1e47284f3200f668489b8c713fe56945554285335ae9efb3718f7bbd2594b713"
+    },
+    {
+      "file": "images/011_rotation.png",
+      "condition": "rotation",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 4,
+          "truth_index": 0,
+          "iou": 0.921875
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 2,
+          "iou": 0.9375157470395565
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 3,
+          "iou": 0.9136363636363637
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 4,
+          "iou": 0.9391812865497076
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            37,
+            60,
+            75,
+            57
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            36,
+            229,
+            67,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            194,
+            58,
+            73,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            205,
+            229,
+            61,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            378,
+            231,
+            61,
+            59
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            376,
+            229,
+            64,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            37,
+            60,
+            75,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            204,
+            228,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            34,
+            227,
+            70,
+            66
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            193,
+            57,
+            75,
+            57
+          ]
+        }
+      ],
+      "input_sha256": "d4336c2ec08d35bdb5e843d84b75fce8aee2025ba355c2c2ddc0880831e2c2f0"
+    },
+    {
+      "file": "images/012_dim.png",
+      "condition": "dim",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 0.9473777777777778
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 0.9475228161668839
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            372,
+            63,
+            57,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            50,
+            70,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            201,
+            45,
+            73,
+            73
           ]
         }
       ],
       "truth": [
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            220,
-            81,
-            53,
-            37
+            50,
+            70,
+            79,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            200,
+            44,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            371,
+            62,
+            59,
+            52
           ]
         }
       ],
-      "input_sha256": "dd80c9e1cf04942674b344515bc8744947b1fa0bd5a38f9fa9c04bb2d51c529c"
+      "input_sha256": "7ebe530205dac8d9768de9d213d275bc78cfe095aac25bf581ed8f9fd2371b6c"
     },
     {
       "file": "images/013_dim.png",
@@ -1454,6 +2318,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 2,
@@ -1466,24 +2336,46 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 2,
+          "prediction_index": 1,
           "truth_index": 0,
           "iou": 1.0
         },
         {
-          "prediction_index": 3,
+          "prediction_index": 2,
           "truth_index": 1,
-          "iou": 1.0
+          "iou": 0.9375157470395565
         },
         {
           "prediction_index": 0,
           "truth_index": 2,
-          "iou": 1.0
+          "iou": 0.9506493506493506
         },
         {
-          "prediction_index": 1,
+          "prediction_index": 3,
           "truth_index": 3,
           "iou": 1.0
         }
@@ -1493,80 +2385,88 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            214,
-            60,
-            45,
-            43
+            198,
+            56,
+            61,
+            54
           ]
         },
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            365,
+            32,
             250,
-            57,
-            55
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            46,
-            64,
             75,
-            33
+            37
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            60,
-            247,
-            47,
-            49
+            198,
+            236,
+            61,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            358,
+            252,
+            67,
+            43
           ]
         }
       ],
       "truth": [
         {
-          "label": "red",
-          "bbox": [
-            46,
-            64,
-            75,
-            33
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            60,
-            247,
-            47,
-            49
-          ]
-        },
-        {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            214,
-            60,
-            45,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            365,
+            32,
             250,
-            57,
+            75,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            197,
+            235,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            197,
+            55,
+            63,
             55
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            358,
+            252,
+            67,
+            43
           ]
         }
       ],
-      "input_sha256": "97fbb163b0e3ee454f15fbdb8f4936d976163356318a5457259bd94a696b1f8f"
+      "input_sha256": "fa4be320a03ffdc1edd571c7d52ad5913c66829a6855567c3ffea99c11b37e5d"
     },
     {
       "file": "images/014_dim.png",
@@ -1581,6 +2481,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 0,
@@ -1588,6 +2494,28 @@
           "fn": 0
         },
         "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -1598,137 +2526,10 @@
       "unmatched_truth_indices": [],
       "detections": [],
       "truth": [],
-      "input_sha256": "7f38bf6272d294d7b56377138c3e7a901cdcba95ddd86786ad12da558f064aaa"
+      "input_sha256": "20181cfcdda86c24de1d99f9ee7733d119fa99aa83fc001fd905f79acbaf8f36"
     },
     {
       "file": "images/015_dim.png",
-      "condition": "dim",
-      "tp": 4,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 4,
-      "true_count": 4,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 3,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 2,
-          "truth_index": 2,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 3,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            367,
-            56,
-            67,
-            53
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            45,
-            71,
-            55,
-            41
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            206,
-            78,
-            51,
-            35
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            380,
-            258,
-            51,
-            47
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            367,
-            56,
-            67,
-            53
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            45,
-            71,
-            55,
-            41
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            206,
-            78,
-            51,
-            35
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            380,
-            258,
-            51,
-            47
-          ]
-        }
-      ],
-      "input_sha256": "5b87d229e19b9d928aff3bb441c390713d9eb5d36c7bf0603a6aaffaf7985eef"
-    },
-    {
-      "file": "images/016_dim.png",
       "condition": "dim",
       "tp": 6,
       "fp": 0,
@@ -1740,6 +2541,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 3,
@@ -1752,34 +2559,56 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 2,
+          "prediction_index": 4,
           "truth_index": 0,
-          "iou": 1.0
+          "iou": 0.9500080115366127
         },
         {
-          "prediction_index": 0,
+          "prediction_index": 2,
           "truth_index": 1,
-          "iou": 1.0
+          "iou": 0.9489638107021342
         },
         {
-          "prediction_index": 1,
+          "prediction_index": 5,
           "truth_index": 2,
           "iou": 1.0
         },
         {
-          "prediction_index": 4,
+          "prediction_index": 0,
           "truth_index": 3,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 5,
-          "truth_index": 4,
-          "iou": 1.0
+          "iou": 0.9428691451375761
         },
         {
           "prediction_index": 3,
+          "truth_index": 4,
+          "iou": 0.9506493506493506
+        },
+        {
+          "prediction_index": 1,
           "truth_index": 5,
           "iou": 1.0
         }
@@ -1789,119 +2618,131 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            196,
-            238,
-            81,
-            45
+            369,
+            49,
+            67,
+            67
           ]
         },
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            370,
-            246,
+            57,
+            70,
+            61,
+            35
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            218,
+            233,
             59,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            54,
-            263,
-            51,
-            33
+            52
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            48,
-            60,
-            73,
-            57
+            217,
+            65,
+            61,
+            54
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            196,
-            72,
-            81,
+            367,
+            223,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            56,
+            264,
+            65,
             37
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            363,
-            78,
-            71,
-            31
           ]
         }
       ],
       "truth": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            54,
-            263,
-            51,
-            33
+            366,
+            222,
+            79,
+            79
           ]
         },
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            196,
-            238,
-            81,
-            45
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            370,
-            246,
-            59,
-            43
+            217,
+            232,
+            61,
+            53
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            196,
-            72,
-            81,
+            56,
+            264,
+            65,
             37
           ]
         },
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "circle",
           "bbox": [
-            363,
-            78,
-            71,
-            31
+            368,
+            48,
+            69,
+            69
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            48,
-            60,
-            73,
-            57
+            216,
+            64,
+            63,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            57,
+            70,
+            61,
+            35
           ]
         }
       ],
-      "input_sha256": "1084119f3c7f2f01ff5ad64c6a5db86ef666881f96f7130cbd7c5d0c0c3c28bc"
+      "input_sha256": "befc3d2840aa8273992b6ffade6f8da839d4dfb9f505a2e45ab921a7ba398579"
     },
     {
-      "file": "images/017_dim.png",
+      "file": "images/016_dim.png",
       "condition": "dim",
       "tp": 3,
       "fp": 0,
@@ -1913,13 +2754,342 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 3,
+          "tp": 1,
           "fp": 0,
           "fn": 0
         },
         "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.9519230769230769
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9411895745154822
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            41,
+            50,
+            63,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            365,
+            234,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            356,
+            59,
+            69,
+            53
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            40,
+            49,
+            65,
+            56
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            356,
+            59,
+            69,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            364,
+            233,
+            67,
+            67
+          ]
+        }
+      ],
+      "input_sha256": "9bb8b35540763c35c0b9a83ad5a95c7905891f115b7fd7ac3c334b2ac67f1b4e"
+    },
+    {
+      "file": "images/017_dim.png",
+      "condition": "dim",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 4,
+      "true_count": 4,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 0,
+          "iou": 0.9487265980772475
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 0.9467796610169491
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 3,
+          "iou": 0.9355012093523246
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            366,
+            54,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            362,
+            236,
+            59,
+            59
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            46,
+            57,
+            63,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            210,
+            238,
+            75,
+            75
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            209,
+            237,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            365,
+            53,
+            59,
+            50
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            46,
+            57,
+            63,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            361,
+            235,
+            61,
+            61
+          ]
+        }
+      ],
+      "input_sha256": "e86b3e20a516fa2da80407076ac1666f5c460ce052986b85e8ec38352c794c68"
+    },
+    {
+      "file": "images/018_bright.png",
+      "condition": "bright",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -1929,12 +3099,12 @@
         {
           "prediction_index": 1,
           "truth_index": 0,
-          "iou": 1.0
+          "iou": 0.9394082840236686
         },
         {
           "prediction_index": 0,
           "truth_index": 1,
-          "iou": 1.0
+          "iou": 0.9534225424601133
         },
         {
           "prediction_index": 2,
@@ -1946,138 +3116,92 @@
       "unmatched_truth_indices": [],
       "detections": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            222,
-            64,
+            379,
+            57,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            61,
+            70,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
             59,
-            55
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            376,
-            233,
-            53,
-            55
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            60,
-            256,
-            47,
-            37
+            254,
+            61,
+            39
           ]
         }
       ],
       "truth": [
         {
           "label": "red",
-          "bbox": [
-            376,
-            233,
-            53,
-            55
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            222,
-            64,
-            59,
-            55
-          ]
-        },
-        {
-          "label": "red",
+          "shape": "circle",
           "bbox": [
             60,
-            256,
-            47,
-            37
+            69,
+            65,
+            65
           ]
-        }
-      ],
-      "input_sha256": "9ab3f68876743b41a99020038d6788bf84204a5d21cc22946f67cb00171950c2"
-    },
-    {
-      "file": "images/018_bright.png",
-      "condition": "bright",
-      "tp": 1,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0
         },
-        "blue": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
         {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            378,
+            56,
+            67,
+            58
+          ]
+        },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            381,
-            64,
-            47,
-            47
+            59,
+            254,
+            61,
+            39
           ]
         }
       ],
-      "truth": [
-        {
-          "label": "red",
-          "bbox": [
-            381,
-            64,
-            47,
-            47
-          ]
-        }
-      ],
-      "input_sha256": "c4b7d61ac7e3f3e3a57984770d406fc360239c16ea88154d087cd0c1ed8282d7"
+      "input_sha256": "864819a237c91881cc3efb76f79088d3c4c7d589f48f1b1b419d387b7cf5cb58"
     },
     {
       "file": "images/019_bright.png",
       "condition": "bright",
-      "tp": 1,
+      "tp": 3,
       "fp": 0,
       "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
+      "predicted_count": 3,
+      "true_count": 3,
       "count_error": 0,
       "class_count_errors": {
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 0,
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
@@ -2087,11 +3211,43 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 0,
+          "prediction_index": 2,
           "truth_index": 0,
           "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 0.9473777777777778
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 0.9522267206477733
         }
       ],
       "unmatched_prediction_indices": [],
@@ -2099,57 +3255,142 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            374,
-            256,
+            210,
+            237,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            43,
             47,
-            41
+            63,
+            56
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            36,
+            255,
+            65,
+            53
           ]
         }
       ],
       "truth": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            374,
-            256,
-            47,
-            41
+            36,
+            255,
+            65,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            209,
+            236,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            42,
+            46,
+            65,
+            57
           ]
         }
       ],
-      "input_sha256": "57e5da162eb85d9107d04bb9755a66f929e8c845a81d027ed5ec846447a16ccf"
+      "input_sha256": "6ef7c4413eee438b1d4031bf89fb4c59af292fa1f88185053ff19f792a0b0eb8"
     },
     {
       "file": "images/020_bright.png",
       "condition": "bright",
-      "tp": 1,
+      "tp": 4,
       "fp": 0,
       "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
+      "predicted_count": 4,
+      "true_count": 4,
       "count_error": 0,
       "class_count_errors": {
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 0,
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
         "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
           "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
           "fp": 0,
           "fn": 0
         }
       },
       "matches": [
         {
-          "prediction_index": 0,
+          "prediction_index": 2,
           "truth_index": 0,
+          "iou": 0.9473777777777778
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 0.9431334622823985
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 2,
           "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 3,
+          "iou": 0.9444554651854791
         }
       ],
       "unmatched_prediction_indices": [],
@@ -2157,26 +3398,88 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            209,
-            242,
-            47,
-            57
+            56,
+            51,
+            53,
+            46
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            202,
+            235,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            366,
+            49,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            199,
+            70,
+            77,
+            45
           ]
         }
       ],
       "truth": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            209,
-            242,
-            47,
-            57
+            365,
+            48,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            55,
+            50,
+            55,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            199,
+            70,
+            77,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            201,
+            234,
+            71,
+            71
           ]
         }
       ],
-      "input_sha256": "0dc11d0afb012dbf06059b898a4b0b487b3bc2fddfadb97d31fb043445074566"
+      "input_sha256": "62b974802ab53dda570bb4996e6789b0a2b35906371a3ea37cd24cba069679fc"
     },
     {
       "file": "images/021_bright.png",
@@ -2191,6 +3494,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 0,
@@ -2203,25 +3512,53 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [],
       "unmatched_prediction_indices": [],
       "unmatched_truth_indices": [],
       "detections": [],
       "truth": [],
-      "input_sha256": "50539168e647f38249a3816a6039d3db8e0b9afc1b80b5a549cd589daebb6915"
+      "input_sha256": "47c61faec15edc151c2b36a201c72b2676db4c297a3a19a08fbb4cb968157def"
     },
     {
       "file": "images/022_bright.png",
       "condition": "bright",
-      "tp": 3,
+      "tp": 6,
       "fp": 0,
       "fn": 0,
-      "predicted_count": 3,
-      "true_count": 3,
+      "predicted_count": 6,
+      "true_count": 6,
       "count_error": 0,
       "class_count_errors": {
         "red": 0,
         "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
       },
       "by_class": {
         "red": {
@@ -2230,6 +3567,241 @@
           "fn": 0
         },
         "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 0,
+          "iou": 0.9428691451375761
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 0.9534225424601133
+        },
+        {
+          "prediction_index": 5,
+          "truth_index": 2,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 3,
+          "iou": 0.9444554651854791
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 4,
+          "iou": 0.9452201933404941
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 5,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            373,
+            42,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            60,
+            75,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            372,
+            224,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            57,
+            52,
+            67,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            45,
+            229,
+            55,
+            48
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            203,
+            239,
+            73,
+            51
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            56,
+            51,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            372,
+            41,
+            67,
+            58
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            203,
+            239,
+            73,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            371,
+            223,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            44,
+            228,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            192,
+            60,
+            75,
+            51
+          ]
+        }
+      ],
+      "input_sha256": "d533d246f789835eb67bd35d5498c9c5a9aed931f0b888eb1437184f085e26ac"
+    },
+    {
+      "file": "images/023_bright.png",
+      "condition": "bright",
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 6,
+      "true_count": 6,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -2242,13 +3814,236 @@
           "iou": 1.0
         },
         {
+          "prediction_index": 5,
+          "truth_index": 1,
+          "iou": 0.9500080115366127
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 0.9522267206477733
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 3,
+          "iou": 1.0
+        },
+        {
           "prediction_index": 1,
+          "truth_index": 4,
+          "iou": 0.9473777777777778
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 5,
+          "iou": 0.9506493506493506
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            362,
+            223,
+            63,
+            56
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            54,
+            243,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            213,
+            258,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            363,
+            49,
+            61,
+            54
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            52,
+            59,
+            61,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            203,
+            60,
+            77,
+            77
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            213,
+            258,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            202,
+            59,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            361,
+            222,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            52,
+            59,
+            61,
+            39
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            53,
+            242,
+            75,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            362,
+            48,
+            63,
+            55
+          ]
+        }
+      ],
+      "input_sha256": "6246d1469309bad498ae3f207a754b991686d36552d82617831fddc22a6ecf9c"
+    },
+    {
+      "file": "images/024_blue_background.png",
+      "condition": "blue_background",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 0.9525198938992042
+        },
+        {
+          "prediction_index": 4,
           "truth_index": 1,
           "iou": 1.0
         },
         {
           "prediction_index": 0,
           "truth_index": 2,
+          "iou": 0.9375157470395565
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 3,
+          "iou": 0.9467796610169491
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 4,
           "iou": 1.0
         }
       ],
@@ -2256,202 +4051,109 @@
       "unmatched_truth_indices": [],
       "detections": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "circle",
           "bbox": [
-            200,
-            62,
-            59,
+            52,
+            60,
+            61,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            372,
+            221,
+            63,
+            57
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            190,
+            251,
+            77,
             41
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            364,
-            72,
-            73,
-            35
+            209,
+            52,
+            57,
+            49
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            361,
-            263,
-            61,
-            39
+            358,
+            68,
+            65,
+            51
           ]
         }
       ],
       "truth": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            361,
-            263,
-            61,
-            39
+            371,
+            220,
+            65,
+            58
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            364,
-            72,
-            73,
-            35
+            358,
+            68,
+            65,
+            51
           ]
         },
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "circle",
           "bbox": [
-            200,
-            62,
+            51,
             59,
+            63,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            208,
+            51,
+            59,
+            50
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            190,
+            251,
+            77,
             41
           ]
         }
       ],
-      "input_sha256": "dad6208a1417820119d2a1e1c486b796c3e9884df5be20d598687a9ee3952f00"
-    },
-    {
-      "file": "images/023_bright.png",
-      "condition": "bright",
-      "tp": 2,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 2,
-      "true_count": 2,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 2,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 1,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            226,
-            70,
-            47,
-            31
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            214,
-            258,
-            73,
-            35
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            226,
-            70,
-            47,
-            31
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            214,
-            258,
-            73,
-            35
-          ]
-        }
-      ],
-      "input_sha256": "cfb67a25921e037373e41de93e7b3c007ec4b83698a4b580e894da527489febc"
-    },
-    {
-      "file": "images/024_blue_background.png",
-      "condition": "blue_background",
-      "tp": 1,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
-      },
-      "by_class": {
-        "red": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 1,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 0,
-          "truth_index": 0,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            58,
-            262,
-            51,
-            37
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            58,
-            262,
-            51,
-            37
-          ]
-        }
-      ],
-      "input_sha256": "9a77b42f1a9fb5ffd16f91e1302064addc7f3ca1167a888723e8b40b56eb5d55"
+      "input_sha256": "415c881024eade2f839543ace07c103e0151fe726a76455ceb80760a1135ec49"
     },
     {
       "file": "images/025_blue_background.png",
@@ -2466,9 +4168,228 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 4,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 0,
+          "iou": 0.9558993304086816
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 2,
+          "iou": 0.9444554651854791
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 3,
+          "iou": 0.9503233392122281
+        },
+        {
+          "prediction_index": 5,
+          "truth_index": 4,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 5,
+          "iou": 0.9411895745154822
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            204,
+            61,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            371,
+            61,
+            61,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            57,
+            79,
+            61,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            355,
+            219,
+            69,
+            60
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            195,
+            233,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            36,
+            247,
+            81,
+            55
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            354,
+            218,
+            71,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "rectangle",
+          "bbox": [
+            57,
+            79,
+            61,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            194,
+            232,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            370,
+            60,
+            63,
+            54
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            36,
+            247,
+            81,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            203,
+            60,
+            67,
+            67
+          ]
+        }
+      ],
+      "input_sha256": "0544f3c7c746878562c5d7f09f1264ccc9e097847ab5e7a1babae8293aa91acc"
+    },
+    {
+      "file": "images/026_blue_background.png",
+      "condition": "blue_background",
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 4,
+      "true_count": 4,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
@@ -2478,35 +4399,47 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 4,
+          "prediction_index": 1,
           "truth_index": 0,
           "iou": 1.0
         },
         {
-          "prediction_index": 5,
+          "prediction_index": 2,
           "truth_index": 1,
-          "iou": 1.0
+          "iou": 0.9500080115366127
         },
         {
           "prediction_index": 0,
           "truth_index": 2,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 3,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 2,
-          "truth_index": 4,
-          "iou": 1.0
+          "iou": 0.9452201933404941
         },
         {
           "prediction_index": 3,
-          "truth_index": 5,
+          "truth_index": 3,
           "iou": 1.0
         }
       ],
@@ -2515,119 +4448,91 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            52,
-            234,
+            50,
             65,
-            51
+            55,
+            48
           ]
         },
         {
           "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            378,
-            254,
-            57,
-            53
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            378,
-            56,
-            63,
+            36,
+            243,
+            69,
             45
           ]
         },
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            205,
-            67,
-            71,
+            366,
+            59,
+            77,
+            77
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            204,
+            259,
+            81,
             39
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            40,
-            71,
-            57,
-            49
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            215,
-            252,
-            47,
-            51
           ]
         }
       ],
       "truth": [
         {
-          "label": "red",
+          "label": "blue",
+          "shape": "rectangle",
           "bbox": [
-            40,
-            71,
+            36,
+            243,
+            69,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            365,
+            58,
+            79,
+            79
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            49,
+            64,
             57,
             49
           ]
         },
         {
           "label": "red",
+          "shape": "rectangle",
           "bbox": [
-            215,
-            252,
-            47,
-            51
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            52,
-            234,
-            65,
-            51
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            378,
-            254,
-            57,
-            53
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            378,
-            56,
-            63,
-            45
-          ]
-        },
-        {
-          "label": "red",
-          "bbox": [
-            205,
-            67,
-            71,
+            204,
+            259,
+            81,
             39
           ]
         }
       ],
-      "input_sha256": "711f897c7fe8da83a807a389f1ab1b379a03f604417027d98556b756ca4ea768"
+      "input_sha256": "c299be1cfed4c2996891078730903fad8b4452186e199ea8ec29d7a3bc411729"
     },
     {
-      "file": "images/026_blue_background.png",
+      "file": "images/027_blue_background.png",
       "condition": "blue_background",
       "tp": 5,
       "fp": 0,
@@ -2639,159 +4544,15 @@
         "red": 0,
         "blue": 0
       },
-      "by_class": {
-        "red": {
-          "tp": 0,
-          "fp": 0,
-          "fn": 0
-        },
-        "blue": {
-          "tp": 5,
-          "fp": 0,
-          "fn": 0
-        }
-      },
-      "matches": [
-        {
-          "prediction_index": 2,
-          "truth_index": 0,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 1,
-          "truth_index": 1,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 0,
-          "truth_index": 2,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 4,
-          "truth_index": 3,
-          "iou": 1.0
-        },
-        {
-          "prediction_index": 3,
-          "truth_index": 4,
-          "iou": 1.0
-        }
-      ],
-      "unmatched_prediction_indices": [],
-      "unmatched_truth_indices": [],
-      "detections": [
-        {
-          "label": "blue",
-          "bbox": [
-            376,
-            62,
-            67,
-            55
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            204,
-            76,
-            77,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            36,
-            245,
-            71,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            214,
-            252,
-            65,
-            53
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            364,
-            253,
-            51,
-            43
-          ]
-        }
-      ],
-      "truth": [
-        {
-          "label": "blue",
-          "bbox": [
-            36,
-            245,
-            71,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            204,
-            76,
-            77,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            376,
-            62,
-            67,
-            55
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            364,
-            253,
-            51,
-            43
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            214,
-            252,
-            65,
-            53
-          ]
-        }
-      ],
-      "input_sha256": "87a04f3fb24705d6c8a038455bbcfb6a73528a6e84561801cead14284dce08c3"
-    },
-    {
-      "file": "images/027_blue_background.png",
-      "condition": "blue_background",
-      "tp": 3,
-      "fp": 0,
-      "fn": 0,
-      "predicted_count": 3,
-      "true_count": 3,
-      "count_error": 0,
-      "class_count_errors": {
-        "red": 0,
-        "blue": 0
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
       },
       "by_class": {
         "red": {
-          "tp": 1,
+          "tp": 3,
           "fp": 0,
           "fn": 0
         },
@@ -2801,21 +4562,53 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 2,
+          "prediction_index": 4,
           "truth_index": 0,
-          "iou": 1.0
+          "iou": 0.9487265980772475
         },
         {
           "prediction_index": 0,
           "truth_index": 1,
+          "iou": 0.9522267206477733
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 2,
           "iou": 1.0
         },
         {
           "prediction_index": 1,
-          "truth_index": 2,
-          "iou": 1.0
+          "truth_index": 3,
+          "iou": 0.9444554651854791
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 4,
+          "iou": 0.9534225424601133
         }
       ],
       "unmatched_prediction_indices": [],
@@ -2823,62 +4616,108 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            374,
-            74,
-            49,
-            41
+            211,
+            53,
+            63,
+            56
           ]
         },
         {
           "label": "blue",
+          "shape": "circle",
           "bbox": [
-            34,
-            252,
-            77,
-            47
+            362,
+            239,
+            69,
+            69
           ]
         },
         {
           "label": "red",
+          "shape": "triangle",
           "bbox": [
-            206,
-            70,
+            54,
+            57,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            59,
+            235,
             63,
-            45
+            53
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            202,
+            244,
+            75,
+            75
           ]
         }
       ],
       "truth": [
         {
           "label": "red",
+          "shape": "circle",
           "bbox": [
-            206,
-            70,
-            63,
-            45
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            374,
-            74,
-            49,
-            41
-          ]
-        },
-        {
-          "label": "blue",
-          "bbox": [
-            34,
-            252,
+            201,
+            243,
             77,
-            47
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            210,
+            52,
+            65,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            59,
+            235,
+            63,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "circle",
+          "bbox": [
+            361,
+            238,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "triangle",
+          "bbox": [
+            53,
+            56,
+            67,
+            58
           ]
         }
       ],
-      "input_sha256": "61f9a434d80315754d240170dd0d63421a17c873f32c592a7966546e6034afd2"
+      "input_sha256": "5df19637b580d8d962593f90308f3f248cba958c99e7d6c2664af317d9676114"
     },
     {
       "file": "images/028_blue_background.png",
@@ -2893,6 +4732,12 @@
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
           "tp": 0,
@@ -2900,6 +4745,28 @@
           "fn": 0
         },
         "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "by_shape": {
+        "rectangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
           "tp": 0,
           "fp": 0,
           "fn": 0
@@ -2910,24 +4777,30 @@
       "unmatched_truth_indices": [],
       "detections": [],
       "truth": [],
-      "input_sha256": "4c42d3dcc8dc672326493ceda7ca397618e8c909354de11ff45eaa4593906528"
+      "input_sha256": "44f1bbc510976c4cad2c88f436ed806ff95bf3dd227ae967ee1f6946a41ca2cd"
     },
     {
       "file": "images/029_blue_background.png",
       "condition": "blue_background",
-      "tp": 1,
+      "tp": 3,
       "fp": 0,
       "fn": 0,
-      "predicted_count": 1,
-      "true_count": 1,
+      "predicted_count": 3,
+      "true_count": 3,
       "count_error": 0,
       "class_count_errors": {
         "red": 0,
         "blue": 0
       },
+      "shape_count_errors": {
+        "rectangle": 0,
+        "circle": 0,
+        "triangle": 0,
+        "unknown": 0
+      },
       "by_class": {
         "red": {
-          "tp": 0,
+          "tp": 2,
           "fp": 0,
           "fn": 0
         },
@@ -2937,10 +4810,42 @@
           "fn": 0
         }
       },
+      "by_shape": {
+        "rectangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "circle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "triangle": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "unknown": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
       "matches": [
         {
-          "prediction_index": 0,
+          "prediction_index": 1,
           "truth_index": 0,
+          "iou": 0.9444554651854791
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 0.9475228161668839
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
           "iou": 1.0
         }
       ],
@@ -2949,26 +4854,68 @@
       "detections": [
         {
           "label": "blue",
+          "shape": "triangle",
           "bbox": [
-            212,
-            248,
-            59,
-            33
+            379,
+            53,
+            57,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "circle",
+          "bbox": [
+            202,
+            49,
+            69,
+            69
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            34,
+            78,
+            75,
+            39
           ]
         }
       ],
       "truth": [
         {
-          "label": "blue",
+          "label": "red",
+          "shape": "circle",
           "bbox": [
-            212,
-            248,
+            201,
+            48,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "shape": "triangle",
+          "bbox": [
+            378,
+            52,
             59,
-            33
+            52
+          ]
+        },
+        {
+          "label": "red",
+          "shape": "rectangle",
+          "bbox": [
+            34,
+            78,
+            75,
+            39
           ]
         }
       ],
-      "input_sha256": "bb11e36463e64165b612dadcc1fe0e694ca41542eca393634eb1f5e6beb0497e"
+      "input_sha256": "e93fdce24e5871e62cb3a19faa7efb3238bb2ac2bb243ee9c65ec609929c0cfd"
     }
   ]
 }

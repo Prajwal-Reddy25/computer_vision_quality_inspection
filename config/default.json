@@ -6,5 +6,10 @@
   "kernel_size": 3,
   "open_iterations": 1,
   "close_iterations": 1,
-  "min_area": 400
+  "min_area": 400,
+  "shape": {
+    "epsilon_ratio": 0.03,
+    "min_circularity": 0.8,
+    "min_rectangle_fill": 0.85
+  }
 }

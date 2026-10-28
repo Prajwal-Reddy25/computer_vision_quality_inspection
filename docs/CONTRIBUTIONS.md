@@ -1,29 +1,24 @@
 # Contribution and AI assistance record
 
-The student defined the project requirements, allowed technologies, experimental
-scope, holdout policy and portfolio goals. The student subsequently authorized
-AI implementation instead of the earlier student-only detector exercise.
-No independently authored student code has been observed in this session.
+The student defined the inspection goals, required classical tools and no-leakage
+workflow, then explicitly authorized AI code completion. The student requested
+this extension to both colors and three shapes, multi-object examples and
+consistent portfolio material.
 
-| Activity | Verified student contribution | AI contribution |
+| Activity | Verified student work | AI assistance |
 |---|---|---|
-| Problem definition | Specified inspection goals, tools, scope and evaluation requirements | Narrowed scenes to isolated red/blue rectangular parts |
-| Initial scaffold | Requested a focused learning project | Wrote generator, models, CLI, matching, reporting, tests and documentation |
-| Detector | Authorized completion; independent implementation not demonstrated | Implemented validation, masks, morphology, contours, filtering, boxes and ordering |
-| Development investigation | Required lighting/background analysis and no leakage | Executed experiments, inspected masks/statistics, selected thresholds and documented rejected candidate |
-| Tests and validation | Defined correctness and reproducibility expectations | Preserved existing tests, added 23 cases, ran both environments and full clean replay |
-| Final evaluation | Required a frozen 30-image evaluation | Froze package/config/runtime, generated seed 92173 images and measured results |
-| Stress cases | Independent modification remains a learning task | Created three limitations demonstrations; did not tune against them |
-| Portfolio/CV/learning | Specified target roles and honest attribution | Prepared documentation, evidence, CV wording, questions, exercises and release draft |
-| GitHub publication | Approval still required | No push or release creation authorized or performed |
+| Scope | Specified requirements, constraints and three-shape upgrade | Proposed straightforward geometry/annotation implementation |
+| Detector and models | Authorized implementation; no independent code observed | Implemented HSV/contour detection, shape heuristics, model/schema compatibility |
+| Dataset | Required multiple colors/shapes, conditions and split separation | Implemented rendering, new seeds and coverage-balanced scenes |
+| Evaluation | Required frozen final data and honest metrics | Executed development/ablation, freeze, final evaluation and clean replay |
+| Tests | Required preserving old expectations | Preserved all 48 old cases and added 33 shape/showcase cases |
+| Presentation | Required multi-object examples and separate images | Exported real six-object outputs and rewrote affected documentation |
+| CV and learning | Specified professional/learning goals | Prepared attributed bullets, questions and independent exercises |
 
-The results are real executed outputs. They do not establish that the student
-can yet reproduce the code independently. Do not claim independent detector
-implementation or personal failure diagnosis without subsequent evidence.
+No independently authored student detector code or personal debugging is
+demonstrated by this session. AI-generated code and executed results must not
+be relabeled as independent student development.
 
-## Future personal evidence
-
-Record date, function changed, rationale, before/after results and assistance.
-Complete the independent exercises in the learning guide. Preserve a personal
-change as a commit and be ready to explain and debug it without generated code.
-CV wording can then name those verified contributions specifically.
+For future personal work, record date, function changed, rationale, before/after
+results, tests and assistance. Preserve an explained commit and practice debugging
+without generated code before strengthening CV claims.
