@@ -29,7 +29,17 @@ generator. They do not estimate performance on real photographs. The
 [engineering report](docs/EVALUATION.md) records development failures and
 separate stress demonstrations where the frozen detector fails.
 
-![Synthetic rotated part: ground truth above, predictions below](evidence/final/images/006_rotation.png.comparison.png)
+### Example detections
+
+**Four parts in one evaluation image.** The top panel shows synthetic ground-truth
+boxes; the bottom shows the detector predictions from the frozen evaluation.
+
+![Four synthetic blue parts: ground truth above and predictions below](evidence/final/images/001_nominal.png.comparison.png)
+
+**Both object colors.** Another saved detector output illustrates red and blue
+part localization on a synthetic development image.
+
+![Red and blue synthetic parts with detected bounding boxes](examples/predictions/001_nominal.png.annotated.png)
 
 ## Setup
 
@@ -131,5 +141,6 @@ See [recorded failures and results](docs/EVALUATION.md),
 and [CV wording](docs/CV.md). Full generated datasets, virtual environments and
 scratch runs are ignored by Git. Selected evidence is retained deliberately.
 
-GitHub publication and the proposed `v1.0.0` release require the owner's approval;
-see the [release draft and publication instructions](docs/RELEASE_v1.0.0.md).
+The repository is now publicly available on GitHub. The
+[original release draft](docs/RELEASE_v1.0.0.md) predates publication and is
+retained as a historical planning document, not as current push instructions.
