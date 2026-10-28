@@ -18,22 +18,9 @@ on each object. The images below are executed outputs, not mockups.
 
 ![Prediction: detected colors, shapes and bounding boxes for the same six objects](examples/showcase_prediction.png)
 
-<<<<<<< HEAD
-### Example detections
-
-**Four parts in one evaluation image.** The top panel shows synthetic ground-truth
-boxes; the bottom shows the detector predictions from the frozen evaluation.
-
-![Four synthetic blue parts: ground truth above and predictions below](evidence/final/images/001_nominal.png.comparison.png)
-
-**Both object colors.** Another saved detector output illustrates red and blue
-part localization on a synthetic development image.
-
-![Red and blue synthetic parts with detected bounding boxes](examples/predictions/001_nominal.png.annotated.png)
-=======
-[Original input](examples/images/showcase.png) · [Annotations](examples/annotations.json)
-· [Detections](examples/detections.json)
->>>>>>> 444056a (Add classical shape inspection and reproducible mixed-object evaluation)
+[Original synthetic input](examples/images/showcase.png) ·
+[Ground-truth annotations](examples/annotations.json) ·
+[Detector predictions](examples/detections.json)
 
 ## Measured results
 
@@ -146,12 +133,11 @@ realistic optics or real-camera testing is claimed.
 [Completion report](docs/COMPLETION_REPORT.md) · [Validation](docs/VALIDATION.md) ·
 [Proposed v1.1.0 notes](docs/RELEASE_v1.1.0.md)
 
-<<<<<<< HEAD
-The repository is now publicly available on GitHub. The
-[original release draft](docs/RELEASE_v1.0.0.md) predates publication and is
-retained as a historical planning document, not as current push instructions.
-=======
-Implementation and experiments are AI-assisted; independent student implementation
-has not been demonstrated. Dataset scratch files and checkpoints are ignored.
-No push, tag or release is performed as part of this upgrade; publication requires approval.
->>>>>>> 444056a (Add classical shape inspection and reproducible mixed-object evaluation)
+Implementation and experiments were AI-assisted; independent student
+implementation has not yet been demonstrated. Generated scratch datasets and
+checkpoints are ignored by Git.
+
+This repository is publicly available on GitHub. The
+[original release draft](docs/RELEASE_v1.0.0.md) and
+[upgrade release proposal](docs/RELEASE_v1.1.0.md) were written before publication;
+their local push instructions are historical, not current instructions.
