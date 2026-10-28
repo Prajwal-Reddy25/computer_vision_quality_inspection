@@ -1,0 +1,1518 @@
+{
+  "synthetic": true,
+  "split": "development",
+  "iou_threshold": 0.5,
+  "fingerprint": {
+    "source_sha256": {
+      "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "cli.py": "875ec1e66e6251cda5b6ccf6efcdfcb0da9a19eb70b04b5122fb4742c4cd5e14",
+      "config.py": "946dddad9b4c344f9a653615f4077601af5a7bd0af459cd9cfbc1124a7414637",
+      "dataset.py": "44b8d363089d96de5b366f68a1c3d399b34fc8ec18455bf4a06e53d8ce543f9d",
+      "detector.py": "baa36ff59304262483412a90ba7adb485b653ede9dde8d17bc83f6adc8c50003",
+      "evaluation.py": "f2e96900025cf8343df33f927c615e04dd7be333a79a6052ef2164aabcd632c4",
+      "models.py": "22195997a0bbd5c9d59abdae4fee6775083626e97359d0f4c597b89bb27f6dbd",
+      "reporting.py": "53ffcdd7ca0bc14160518a41bab51e5c50d2337b762de9c2378cb4e2021cb490",
+      "visualization.py": "9588a66457f24a71961bc17b44efe51240556d0e317fd59beb2b5d3034d2127a"
+    },
+    "config_sha256": "56bc71cef7ce9073d7336fc8e394853fa64d03610416626e3573a6a198664638",
+    "environment": {
+      "python": "3.12.3",
+      "opencv": "4.6.0",
+      "numpy": "1.26.4"
+    }
+  },
+  "config": {
+    "hsv_ranges": {
+      "red": [
+        [
+          [
+            0,
+            180,
+            50
+          ],
+          [
+            10,
+            255,
+            255
+          ]
+        ],
+        [
+          [
+            170,
+            180,
+            50
+          ],
+          [
+            179,
+            255,
+            255
+          ]
+        ]
+      ],
+      "blue": [
+        [
+          [
+            100,
+            180,
+            50
+          ],
+          [
+            130,
+            255,
+            255
+          ]
+        ]
+      ]
+    },
+    "kernel_size": 3,
+    "open_iterations": 1,
+    "close_iterations": 1,
+    "min_area": 400
+  },
+  "frozen": null,
+  "annotations_sha256": "cee1572aadf805cb0b224260f63ef7e51a2ff9cc6c2ddd1f6e28db83f6f79a84",
+  "overall": {
+    "images": 15,
+    "tp": 36,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.972972972972973,
+    "f1": 0.9863013698630136,
+    "count_mae": 0.06666666666666667,
+    "exact_count_images": 14,
+    "exact_class_count_images": 14
+  },
+  "by_condition": {
+    "blue_background": {
+      "images": 3,
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "count_mae": 0.0,
+      "exact_count_images": 3,
+      "exact_class_count_images": 3
+    },
+    "bright": {
+      "images": 3,
+      "tp": 7,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333333333333333,
+      "count_mae": 0.3333333333333333,
+      "exact_count_images": 2,
+      "exact_class_count_images": 2
+    },
+    "dim": {
+      "images": 3,
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "count_mae": 0.0,
+      "exact_count_images": 3,
+      "exact_class_count_images": 3
+    },
+    "nominal": {
+      "images": 3,
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "count_mae": 0.0,
+      "exact_count_images": 3,
+      "exact_class_count_images": 3
+    },
+    "rotation": {
+      "images": 3,
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "count_mae": 0.0,
+      "exact_count_images": 3,
+      "exact_class_count_images": 3
+    }
+  },
+  "by_class": {
+    "red": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 1
+    },
+    "blue": {
+      "tp": 22,
+      "fp": 0,
+      "fn": 0
+    }
+  },
+  "images": [
+    {
+      "file": "images/000_nominal.png",
+      "condition": "nominal",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 0,
+      "true_count": 0,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [],
+      "truth": [],
+      "input_sha256": "9d83992020bfe1fbc05b06a19515e777436de19208a16f87c940408c62414343"
+    },
+    {
+      "file": "images/001_nominal.png",
+      "condition": "nominal",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 2,
+      "true_count": 2,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            250,
+            77,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            54,
+            64,
+            75,
+            45
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "bbox": [
+            54,
+            64,
+            75,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            250,
+            77,
+            57
+          ]
+        }
+      ],
+      "input_sha256": "3274dbc6801733de0b0a140671c68f0bf79a32d31992122a4f5ca54a1567a887"
+    },
+    {
+      "file": "images/002_nominal.png",
+      "condition": "nominal",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 2,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 2,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 3,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 4,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            375,
+            76,
+            61,
+            47
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            39,
+            80,
+            77,
+            37
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            216,
+            264,
+            47,
+            33
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            377,
+            245,
+            53,
+            31
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            47,
+            252,
+            63,
+            41
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            216,
+            264,
+            47,
+            33
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            377,
+            245,
+            53,
+            31
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            39,
+            80,
+            77,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            47,
+            252,
+            63,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            375,
+            76,
+            61,
+            47
+          ]
+        }
+      ],
+      "input_sha256": "6255cf9855471377f9e527bc8f6e6cd2d505b37f4ec95f3b646aabaf8dbdce4c"
+    },
+    {
+      "file": "images/003_rotation.png",
+      "condition": "rotation",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 0.9411895745154822
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 0.9498795180722892
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 3,
+          "iou": 0.9402985074626866
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 4,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "red",
+          "bbox": [
+            371,
+            39,
+            73,
+            81
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            213,
+            50,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            38,
+            62,
+            63,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            361,
+            244,
+            57,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            201,
+            253,
+            79,
+            43
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "bbox": [
+            212,
+            49,
+            67,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            201,
+            253,
+            79,
+            43
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            370,
+            38,
+            75,
+            83
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            37,
+            61,
+            65,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            361,
+            244,
+            57,
+            55
+          ]
+        }
+      ],
+      "input_sha256": "f0c9460c4568530f62f710ff8b612db8c68b0bdda6e01221e515ccc5b6967b0b"
+    },
+    {
+      "file": "images/004_rotation.png",
+      "condition": "rotation",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 0.9444113559658527
+        },
+        {
+          "prediction_index": 3,
+          "truth_index": 2,
+          "iou": 0.9365079365079365
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 3,
+          "iou": 0.9365079365079365
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 4,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            63,
+            49,
+            59,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            215,
+            63,
+            75,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            354,
+            233,
+            71,
+            67
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            223,
+            248,
+            59,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            367,
+            53,
+            63,
+            55
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            215,
+            63,
+            75,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            353,
+            232,
+            73,
+            69
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            222,
+            247,
+            61,
+            63
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            62,
+            48,
+            61,
+            63
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            367,
+            53,
+            63,
+            55
+          ]
+        }
+      ],
+      "input_sha256": "53458884d9be8b877540c2aac2bc4cecf8b214b01d986b265445d9f5e1b38c1e"
+    },
+    {
+      "file": "images/005_rotation.png",
+      "condition": "rotation",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 0.9565059804276912
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 0.9528877536540372
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            359,
+            37,
+            87,
+            91
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            349,
+            240,
+            85,
+            79
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            33,
+            244,
+            79,
+            41
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            358,
+            36,
+            89,
+            93
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            348,
+            239,
+            87,
+            81
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            33,
+            244,
+            79,
+            41
+          ]
+        }
+      ],
+      "input_sha256": "b80412c90351329fc278f3993bce0886635d4ad1652fbc46317c2fd9f73273c5"
+    },
+    {
+      "file": "images/006_dim.png",
+      "condition": "dim",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 1,
+      "true_count": 1,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            232,
+            75,
+            53
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            232,
+            75,
+            53
+          ]
+        }
+      ],
+      "input_sha256": "4b8bff66a5a7096813838b45b6e5f848ed73946db94bce1fc420a20ec7b49c64"
+    },
+    {
+      "file": "images/007_dim.png",
+      "condition": "dim",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 0,
+      "true_count": 0,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [],
+      "truth": [],
+      "input_sha256": "06b7f800cbefc65284f2a24da7dd1a6a30b2a5e87ded0e48f153054fb9a55d1e"
+    },
+    {
+      "file": "images/008_dim.png",
+      "condition": "dim",
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 2,
+      "true_count": 2,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            58,
+            247,
+            49,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            210,
+            261,
+            57,
+            37
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            58,
+            247,
+            49,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            210,
+            261,
+            57,
+            37
+          ]
+        }
+      ],
+      "input_sha256": "b52e71fb9095b7de0720f53dcec3d9b926e679df5f2470f7712a681e3ebfd003"
+    },
+    {
+      "file": "images/009_bright.png",
+      "condition": "bright",
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "predicted_count": 1,
+      "true_count": 2,
+      "count_error": -1,
+      "class_count_errors": {
+        "red": -1,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        },
+        "blue": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [
+        1
+      ],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            244,
+            71,
+            51
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            244,
+            71,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            371,
+            256,
+            67,
+            35
+          ]
+        }
+      ],
+      "input_sha256": "048248c58226a80906c51b314dc2e9af3c471446b23a6f2731eb788713276235"
+    },
+    {
+      "file": "images/010_bright.png",
+      "condition": "bright",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 1,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            215,
+            58,
+            73,
+            47
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            47,
+            70,
+            49,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            218,
+            240,
+            69,
+            55
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            47,
+            70,
+            49,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            218,
+            240,
+            69,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            215,
+            58,
+            73,
+            47
+          ]
+        }
+      ],
+      "input_sha256": "c1c10a98142354b9c732a46c839c3cd2fe29aeb19a45357fa594c72c9b1eefc3"
+    },
+    {
+      "file": "images/011_bright.png",
+      "condition": "bright",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 3,
+      "true_count": 3,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 2,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 2,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            377,
+            64,
+            67,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            62,
+            244,
+            53,
+            41
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            196,
+            62,
+            79,
+            47
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "bbox": [
+            196,
+            62,
+            79,
+            47
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            62,
+            244,
+            53,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            377,
+            64,
+            67,
+            55
+          ]
+        }
+      ],
+      "input_sha256": "66a345ff148ace6ce95c33ff3f019e8b2065a37c81fe06b99f816c169b972bf8"
+    },
+    {
+      "file": "images/012_blue_background.png",
+      "condition": "blue_background",
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 5,
+      "true_count": 5,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 3,
+          "truth_index": 0,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 0,
+          "truth_index": 1,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 2,
+          "truth_index": 2,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 1,
+          "truth_index": 3,
+          "iou": 1.0
+        },
+        {
+          "prediction_index": 4,
+          "truth_index": 4,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            374,
+            60,
+            55,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            202,
+            253,
+            57,
+            43
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            214,
+            68,
+            55,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            47,
+            242,
+            51,
+            33
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            357,
+            248,
+            65,
+            55
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "red",
+          "bbox": [
+            47,
+            242,
+            51,
+            33
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            374,
+            60,
+            55,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            214,
+            68,
+            55,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            202,
+            253,
+            57,
+            43
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            357,
+            248,
+            65,
+            55
+          ]
+        }
+      ],
+      "input_sha256": "1e0500b56f1d5aff99e5f0f1a77a8714e2ee7b284e312645760d8b6b64417a60"
+    },
+    {
+      "file": "images/013_blue_background.png",
+      "condition": "blue_background",
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 1,
+      "true_count": 1,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [
+        {
+          "prediction_index": 0,
+          "truth_index": 0,
+          "iou": 1.0
+        }
+      ],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            372,
+            62,
+            49,
+            37
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            372,
+            62,
+            49,
+            37
+          ]
+        }
+      ],
+      "input_sha256": "354414a61e5f317d26a5593288f63c202affd7e8caee22f72f5ad1e7e26a8c15"
+    },
+    {
+      "file": "images/014_blue_background.png",
+      "condition": "blue_background",
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "predicted_count": 0,
+      "true_count": 0,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [],
+      "detections": [],
+      "truth": [],
+      "input_sha256": "236300a5a554d26c10f9ec35324cb2de4c67cf44086831eeb58dc79ad7a61550"
+    }
+  ]
+}

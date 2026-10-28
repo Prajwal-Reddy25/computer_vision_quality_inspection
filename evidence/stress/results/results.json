@@ -1,0 +1,306 @@
+{
+  "synthetic": true,
+  "split": "development",
+  "iou_threshold": 0.5,
+  "fingerprint": {
+    "source_sha256": {
+      "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "cli.py": "af1a0b976dba9640e72d6931d84eebaa632bb7de7a5e8ffa808747daf26190e5",
+      "config.py": "fcb1cda67384cf725b3389d937ad342585658933ec3d442feb69b3c0b678d0af",
+      "dataset.py": "0ecee511594491856d1addaf78653b9694052620e12fc031cc21245225d2e1db",
+      "detector.py": "baa36ff59304262483412a90ba7adb485b653ede9dde8d17bc83f6adc8c50003",
+      "diagnostics.py": "cbce857bea8bef472c9ad4f8d9fab738cdca973adbb3d8be8b789561a949f41e",
+      "evaluation.py": "c722b3ddedab55df42fbcde4d9cb48dd3bf19069b0422fb5ce2c5d7029f11135",
+      "models.py": "b744b331d43e76b028f5d4c47e9936b6767f351dd9d4fe03bc28507a28f2eaa9",
+      "reporting.py": "c87f8bd96e54020fbe8c0cfa0f33eb527422eeaf8e204bd860a17edfa0024244",
+      "visualization.py": "508cafd9bcb9ec2f90220712b17238ca3c11bfaf55a3fc38a151d3eb0dd2267d"
+    },
+    "config_sha256": "2c168eaa1906442fb18c05b42debb57fe334dfbcd06490eeb01beefe78f5bf4a",
+    "environment": {
+      "python": "3.12.3",
+      "opencv": "4.14.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "config": {
+    "hsv_ranges": {
+      "red": [
+        [
+          [
+            0,
+            120,
+            50
+          ],
+          [
+            10,
+            255,
+            255
+          ]
+        ],
+        [
+          [
+            170,
+            120,
+            50
+          ],
+          [
+            179,
+            255,
+            255
+          ]
+        ]
+      ],
+      "blue": [
+        [
+          [
+            100,
+            175,
+            50
+          ],
+          [
+            130,
+            255,
+            255
+          ]
+        ]
+      ]
+    },
+    "kernel_size": 3,
+    "open_iterations": 1,
+    "close_iterations": 1,
+    "min_area": 400
+  },
+  "frozen": null,
+  "annotations_sha256": "ef7464a023a2a2c9f3f2f753460c9334b074f21011b67218b959fbf1bc1b51c4",
+  "overall": {
+    "images": 3,
+    "tp": 0,
+    "fp": 3,
+    "fn": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "count_mae": 0.6666666666666666,
+    "exact_count_images": 1,
+    "exact_class_count_images": 1
+  },
+  "by_condition": {
+    "dark_stripe": {
+      "images": 1,
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "count_mae": 1.0,
+      "exact_count_images": 0,
+      "exact_class_count_images": 0
+    },
+    "same_color_background": {
+      "images": 1,
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "count_mae": 0.0,
+      "exact_count_images": 1,
+      "exact_class_count_images": 1
+    },
+    "small_part": {
+      "images": 1,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": null,
+      "recall": 0.0,
+      "f1": 0.0,
+      "count_mae": 1.0,
+      "exact_count_images": 0,
+      "exact_class_count_images": 0
+    }
+  },
+  "by_class": {
+    "red": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "blue": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 3
+    }
+  },
+  "images": [
+    {
+      "file": "images/small_part.png",
+      "condition": "small_part",
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "predicted_count": 0,
+      "true_count": 1,
+      "count_error": -1,
+      "class_count_errors": {
+        "red": 0,
+        "blue": -1
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 1
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [],
+      "unmatched_truth_indices": [
+        0
+      ],
+      "detections": [],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            30,
+            30,
+            20,
+            20
+          ]
+        }
+      ],
+      "input_sha256": "8c149c9cbe586e6043c8d0e639d6b9d1df8295bbba3456fa8e50221319e26211"
+    },
+    {
+      "file": "images/dark_stripe.png",
+      "condition": "dark_stripe",
+      "tp": 0,
+      "fp": 2,
+      "fn": 1,
+      "predicted_count": 2,
+      "true_count": 1,
+      "count_error": 1,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 1
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 1
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [
+        0,
+        1
+      ],
+      "unmatched_truth_indices": [
+        0
+      ],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            40,
+            40,
+            27,
+            40
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            72,
+            40,
+            28,
+            40
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            40,
+            40,
+            60,
+            40
+          ]
+        }
+      ],
+      "input_sha256": "42bcc9fd51f02a4ec1747306c25960e96fb0a14e7377af8cd8d99f880a86420d"
+    },
+    {
+      "file": "images/same_color_background.png",
+      "condition": "same_color_background",
+      "tp": 0,
+      "fp": 1,
+      "fn": 1,
+      "predicted_count": 1,
+      "true_count": 1,
+      "count_error": 0,
+      "class_count_errors": {
+        "red": 0,
+        "blue": 0
+      },
+      "by_class": {
+        "red": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "blue": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 1
+        }
+      },
+      "matches": [],
+      "unmatched_prediction_indices": [
+        0
+      ],
+      "unmatched_truth_indices": [
+        0
+      ],
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            0,
+            0,
+            160,
+            120
+          ]
+        }
+      ],
+      "truth": [
+        {
+          "label": "blue",
+          "bbox": [
+            40,
+            40,
+            60,
+            40
+          ]
+        }
+      ],
+      "input_sha256": "ee1a735a38e3378a186870d729c0b589cf5c41d7729441af8f8badb9128bf0da"
+    }
+  ]
+}

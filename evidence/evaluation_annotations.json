@@ -1,0 +1,909 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "split": "evaluation",
+  "seed": 92173,
+  "images": [
+    {
+      "file": "images/000_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": []
+    },
+    {
+      "file": "images/001_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            35,
+            70,
+            69,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            43,
+            245,
+            77,
+            47
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            378,
+            262,
+            53,
+            37
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            210,
+            68,
+            73,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/002_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            37,
+            260,
+            77,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            382,
+            246,
+            51,
+            33
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            206,
+            78,
+            71,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/003_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            32,
+            256,
+            73,
+            47
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            200,
+            240,
+            79,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/004_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            356,
+            240,
+            75,
+            39
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            382,
+            64,
+            47,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            56,
+            66,
+            69,
+            33
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            56,
+            258,
+            53,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/005_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            216,
+            252,
+            61,
+            53
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            52,
+            62,
+            73,
+            41
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            374,
+            66,
+            65,
+            51
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            382,
+            243,
+            49,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/006_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            355,
+            240,
+            93,
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/007_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": []
+    },
+    {
+      "file": "images/008_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            209,
+            49,
+            71,
+            61
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            353,
+            45,
+            91,
+            71
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            360,
+            238,
+            75,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            34,
+            227,
+            83,
+            75
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            194,
+            225,
+            71,
+            71
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            44,
+            51,
+            77,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/009_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            38,
+            56,
+            71,
+            83
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            43,
+            241,
+            79,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/010_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            51,
+            250,
+            63,
+            61
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            216,
+            242,
+            73,
+            73
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/011_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            41,
+            55,
+            73,
+            77
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            364,
+            227,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            207,
+            244,
+            73,
+            73
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            35,
+            228,
+            85,
+            71
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/012_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            220,
+            81,
+            53,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/013_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            46,
+            64,
+            75,
+            33
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            60,
+            247,
+            47,
+            49
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            214,
+            60,
+            45,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            365,
+            250,
+            57,
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/014_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": []
+    },
+    {
+      "file": "images/015_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            367,
+            56,
+            67,
+            53
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            45,
+            71,
+            55,
+            41
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            206,
+            78,
+            51,
+            35
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            380,
+            258,
+            51,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/016_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            54,
+            263,
+            51,
+            33
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            196,
+            238,
+            81,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            370,
+            246,
+            59,
+            43
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            196,
+            72,
+            81,
+            37
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            363,
+            78,
+            71,
+            31
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            48,
+            60,
+            73,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/017_dim.png",
+      "width": 480,
+      "height": 360,
+      "condition": "dim",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            376,
+            233,
+            53,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            222,
+            64,
+            59,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            60,
+            256,
+            47,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/018_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            381,
+            64,
+            47,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/019_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            374,
+            256,
+            47,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/020_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            209,
+            242,
+            47,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/021_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": []
+    },
+    {
+      "file": "images/022_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            361,
+            263,
+            61,
+            39
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            364,
+            72,
+            73,
+            35
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            200,
+            62,
+            59,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/023_bright.png",
+      "width": 480,
+      "height": 360,
+      "condition": "bright",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            226,
+            70,
+            47,
+            31
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            214,
+            258,
+            73,
+            35
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/024_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            58,
+            262,
+            51,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/025_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            40,
+            71,
+            57,
+            49
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            215,
+            252,
+            47,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            52,
+            234,
+            65,
+            51
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            378,
+            254,
+            57,
+            53
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            378,
+            56,
+            63,
+            45
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            205,
+            67,
+            71,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/026_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            36,
+            245,
+            71,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            204,
+            76,
+            77,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            376,
+            62,
+            67,
+            55
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            364,
+            253,
+            51,
+            43
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            214,
+            252,
+            65,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/027_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            206,
+            70,
+            63,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            374,
+            74,
+            49,
+            41
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            34,
+            252,
+            77,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/028_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": []
+    },
+    {
+      "file": "images/029_blue_background.png",
+      "width": 480,
+      "height": 360,
+      "condition": "blue_background",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            212,
+            248,
+            59,
+            33
+          ]
+        }
+      ]
+    }
+  ]
+}

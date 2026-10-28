@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "split": "development",
+  "purpose": "post-evaluation limitations demonstration; not used for tuning",
+  "seed": null,
+  "images": [
+    {
+      "file": "images/small_part.png",
+      "width": 160,
+      "height": 120,
+      "condition": "small_part",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            30,
+            30,
+            20,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/dark_stripe.png",
+      "width": 160,
+      "height": 120,
+      "condition": "dark_stripe",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            40,
+            40,
+            60,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/same_color_background.png",
+      "width": 160,
+      "height": 120,
+      "condition": "same_color_background",
+      "objects": [
+        {
+          "label": "blue",
+          "bbox": [
+            40,
+            40,
+            60,
+            40
+          ]
+        }
+      ]
+    }
+  ]
+}

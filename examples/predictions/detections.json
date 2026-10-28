@@ -1,0 +1,108 @@
+{
+  "fingerprint": {
+    "source_sha256": {
+      "__init__.py": "98df6a213592d3fff95b95d69e434aacbd2f8b48c1fb23629a14c54653c293e2",
+      "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "cli.py": "af1a0b976dba9640e72d6931d84eebaa632bb7de7a5e8ffa808747daf26190e5",
+      "config.py": "fcb1cda67384cf725b3389d937ad342585658933ec3d442feb69b3c0b678d0af",
+      "dataset.py": "0ecee511594491856d1addaf78653b9694052620e12fc031cc21245225d2e1db",
+      "detector.py": "baa36ff59304262483412a90ba7adb485b653ede9dde8d17bc83f6adc8c50003",
+      "diagnostics.py": "cbce857bea8bef472c9ad4f8d9fab738cdca973adbb3d8be8b789561a949f41e",
+      "evaluation.py": "c722b3ddedab55df42fbcde4d9cb48dd3bf19069b0422fb5ce2c5d7029f11135",
+      "models.py": "b744b331d43e76b028f5d4c47e9936b6767f351dd9d4fe03bc28507a28f2eaa9",
+      "reporting.py": "c87f8bd96e54020fbe8c0cfa0f33eb527422eeaf8e204bd860a17edfa0024244",
+      "visualization.py": "508cafd9bcb9ec2f90220712b17238ca3c11bfaf55a3fc38a151d3eb0dd2267d"
+    },
+    "config_sha256": "2c168eaa1906442fb18c05b42debb57fe334dfbcd06490eeb01beefe78f5bf4a",
+    "environment": {
+      "python": "3.12.3",
+      "opencv": "4.14.0",
+      "numpy": "2.5.4"
+    }
+  },
+  "images": [
+    {
+      "file": "001_nominal.png",
+      "total_count": 2,
+      "counts": {
+        "red": 1,
+        "blue": 1
+      },
+      "detections": [
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            250,
+            77,
+            57
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            54,
+            64,
+            75,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "file": "003_rotation.png",
+      "total_count": 5,
+      "counts": {
+        "red": 5,
+        "blue": 0
+      },
+      "detections": [
+        {
+          "label": "red",
+          "bbox": [
+            371,
+            39,
+            73,
+            81
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            213,
+            50,
+            65,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            38,
+            62,
+            63,
+            65
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            361,
+            244,
+            57,
+            55
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            201,
+            253,
+            79,
+            43
+          ]
+        }
+      ]
+    }
+  ]
+}

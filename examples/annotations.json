@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "split": "development",
+  "seed": 1729,
+  "images": [
+    {
+      "file": "images/001_nominal.png",
+      "width": 480,
+      "height": 360,
+      "condition": "nominal",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            54,
+            64,
+            75,
+            45
+          ]
+        },
+        {
+          "label": "blue",
+          "bbox": [
+            48,
+            250,
+            77,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "file": "images/003_rotation.png",
+      "width": 480,
+      "height": 360,
+      "condition": "rotation",
+      "objects": [
+        {
+          "label": "red",
+          "bbox": [
+            212,
+            49,
+            67,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            201,
+            253,
+            79,
+            43
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            370,
+            38,
+            75,
+            83
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            37,
+            61,
+            65,
+            67
+          ]
+        },
+        {
+          "label": "red",
+          "bbox": [
+            361,
+            244,
+            57,
+            55
+          ]
+        }
+      ]
+    }
+  ]
+}
